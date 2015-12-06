@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="LanguageInjectionConfiguration">
-    <injection language="SQLite" injector-id="java">
-      <display-name>Class.forName (java.lang)</display-name>
-      <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("forName").withParameters("java.lang.String").definedInClass("java.lang.Class"))]]></place>
-    </injection>
-  </component>
-</project>

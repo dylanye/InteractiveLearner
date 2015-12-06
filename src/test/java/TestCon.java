@@ -1,3 +1,7 @@
+package test.java;
+
+import main.java.database.ConnectionConfig;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 

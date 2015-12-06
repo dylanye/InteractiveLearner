@@ -1,4 +1,4 @@
-package main.classifier;
+package main.java.classifier;
 /**
  * @author C. Visscher
  */

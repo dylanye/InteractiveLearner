@@ -31,7 +31,7 @@ public class Reader {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		BufferedReader reader = new BufferedReader(new FileReader("c:/Users/Christiaan/Desktop/project/index.txt"));
+		BufferedReader reader = new BufferedReader(new FileReader(""));
 		Reader.read(reader);
 		
 	}

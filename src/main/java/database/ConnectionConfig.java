@@ -13,7 +13,7 @@ public class ConnectionConfig {
 
         try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:/home/dylan/Documents/Development/InteractiveLearner/Database/AILearner.sqlite");
+            connection = DriverManager.getConnection("jdbc:sqlite:./Database/AILearner.sqlite");
         } catch (Exception e) {
             e.printStackTrace();
         }

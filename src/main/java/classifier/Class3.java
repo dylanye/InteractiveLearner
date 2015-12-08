@@ -27,7 +27,15 @@ public class Class3 {
 			storeCatFiles(cat, folder);
 		}
 		countWord();
-		printMapMap();
+		System.out.println(categorizedWordCount.toString());
+	}
+	
+	public Map<String, File[]> getCategorizedFolder() {
+		return categorizedFolder;
+	}
+	
+	public Map<String, Map<String, Integer>> getCategorizedWordCount() {
+		return categorizedWordCount;
 	}
 	
 	public String askCategory() {
@@ -58,36 +66,19 @@ public class Class3 {
 		categorizedFolder.put(Cat, files);
 	}
 	
-	public void printMap() {
-		Set<String> keys = categorizedFolder.keySet();
-		for(String key : keys) {
-			File[] files = categorizedFolder.get(key);
-			for (int i = 0; i < files.length; i++) {
-				System.out.println(key + files[i].toString());
-			}
-		}
-	}
-	
-	public void printMapMap() {
-		Set<String> keys = categorizedWordCount.keySet();
-		for(String key : keys) {
-			Map<String, Integer> printMap = new HashMap<String, Integer>();
-			printMap = categorizedWordCount.get(key);
-			System.out.println("key: " + key + " inhoud: " + printMap.toString());
-		}
-	}
 	public void countWord() throws FileNotFoundException {
 		Set<String> keys = categorizedFolder.keySet();
 		for(String key : keys) {
-			File[] files = categorizedFolder.get(key);
-			Map<String, Integer> wordCount = new HashMap<String, Integer>();
-			for (int i = 0; i < files.length; i++) {
-				String text = read(files[i]);
+			File[] filesFromMap = categorizedFolder.get(key);
+			Map<String, Integer> result = new HashMap<String, Integer>();
+			for (int i = 0; i < filesFromMap.length; i++) {
+				Map<String, Integer> wordCount = new HashMap<String, Integer>();
+				String text = read(filesFromMap[i]);
 				String[] tokenizedText = tokenizer(text);
-				
 				wordCount = removeAndCountDoubles(tokenizedText);
+				wordCount.forEach((k, v) -> result.merge(k, v, (v1, v2) -> v1 + v2));
 			}
-			categorizedWordCount.put(key, wordCount);	
+			categorizedWordCount.put(key, result);				
 		}
 	}
 	

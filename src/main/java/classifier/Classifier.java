@@ -6,13 +6,17 @@ import java.util.Scanner;
 public class Classifier {
 	private Reader reader;
 	private String fileLocation;
+    private File[] files;
 	
 	public Classifier() {
-		reader = new Reader();
 		run();
 	}
 	
 	public void run() {
+        askFileLocation();
+        askTrainingOrApply();
+
+
 		boolean proceed = true;
 		do {
 			try {
@@ -26,10 +30,13 @@ public class Classifier {
 		reader.tokenizer();
 		reader.removeAndCountDoubbles();
 	}
-	
-	public String askFileLocation() {
+
+    public
+
+	public File askFileLocation() {
 		String fileloc = sendQuestion("Please, enter the location of the file.");
-		return fileloc;
+		File folder = new File(fileloc);
+        files = folder.listFiles();
 	}
 	
 	public String askTrainingOrApply() {

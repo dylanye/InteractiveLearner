@@ -1,11 +1,30 @@
 package main.java.classifier;
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Classifier {
-	private Reader read;
+	private Reader reader;
+	private String fileLocation;
+	
 	public Classifier() {
-		read = new Reader(askFileLocation());
+		reader = new Reader();
+		run();
+	}
+	
+	public void run() {
+		boolean proceed = true;
+		do {
+			try {
+				fileLocation = askFileLocation();
+				reader.read(fileLocation);
+				proceed = false;
+			} catch (FileNotFoundException e) {
+				System.out.println("Could not find file" + e.getStackTrace());
+			}
+		} while(proceed);
+		reader.tokenizer();
+		reader.removeAndCountDoubbles();
 	}
 	
 	public String askFileLocation() {

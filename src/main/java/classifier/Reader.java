@@ -12,12 +12,10 @@ import java.util.Map;
 import java.util.Set;
 
 public class Reader {
-	private String fileLocation;
 	private String fullInput;
 	private String[] tokenizedInput;
 	private HashMap<String, Integer> wordCount;
-	public Reader(String fileloc) {
-		fileLocation = fileloc;
+	public Reader() {
 		fullInput = "";
 		wordCount = new HashMap<String, Integer>();
 
@@ -93,7 +91,7 @@ public class Reader {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		Reader read = new Reader("C:/MOD6AI/files/blogs/M/M-test3.txt");
+		Reader read = new Reader();
 		read.read("C:/MOD6AI/files/blogs/M/M-test3.txt");
 		read.tokenizer();
 		read.removeAndCountDoubbles();

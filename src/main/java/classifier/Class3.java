@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
@@ -26,8 +28,10 @@ public class Class3 {
 			String folder = askFolderLocation();
 			storeCatFiles(cat, folder);
 		}
-		countWord();
-		System.out.println(categorizedWordCount.toString());
+		//countWord();
+		//System.out.println(concatenateAllText("M").toString());
+		//System.out.println(categorizedFolder.toString());
+		//System.out.println(categorizedWordCount.toString());
 	}
 	
 	public Map<String, File[]> getCategorizedFolder() {
@@ -88,6 +92,21 @@ public class Class3 {
 //			System.out.println(tokenizedInput[i]);
 		}
 		return tokenizedText;
+	}
+	
+	public List<String> concatenateAllText(String cat) throws FileNotFoundException {
+		List<String> result = new ArrayList<String>();
+		File[] filesFromMap = categorizedFolder.get(cat);
+		for (int i = 0; i < filesFromMap.length; i++) {
+			List<String> temp = new ArrayList<String>();
+			String text = read(filesFromMap[i]);
+			String[] tokenizedText = tokenizer(text);
+			for (int j = 0; j < tokenizedText.length; j++) {
+				temp.add(tokenizedText[j]);
+			}
+			result.addAll(temp);
+		}
+		return result;
 	}
 	
 	public Map<String, Integer> removeAndCountDoubles(String[] tokenizedText) {

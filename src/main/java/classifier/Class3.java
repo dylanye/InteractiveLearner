@@ -20,11 +20,14 @@ public class Class3 {
 		wordCount = new HashMap<String, Map<String, Integer>>();
 	}
 	
-	public void run() {
+	public void run() throws FileNotFoundException {
+		while(askAddAnotherCat()) {
 		String cat = askCategory();
 		String folder = askFolderLocation();
 		storeCatFiles(cat, folder);
+		}
 		printMap();
+		countWord();
 	}
 	
 	public String askCategory() {
@@ -35,6 +38,19 @@ public class Class3 {
 	public String askFolderLocation() {
 		String answer = sendQuestion("Were are your files located?");
 		return answer;
+	}
+	
+	public boolean askAddAnotherCat() {
+		String answer = "";
+		boolean proceed = false;
+		do {
+			answer = sendQuestion("Do you want to add another Category?(Yes/No)");
+			System.out.println(!answer.equals("Yes") + "|" + !answer.equals("No"));
+			} while(!answer.equals("Yes") && !answer.equals("No"));
+		if(answer.equals("Yes")) {
+			proceed = true;
+		}
+		return proceed;
 	}
 	
 	public void storeCatFiles(String Cat, String loc) {
@@ -51,9 +67,9 @@ public class Class3 {
 				System.out.println(key + files[i].toString());
 			}
 		}
-	}	
-/*	
-	public void countWord() {
+	}
+	
+	public void countWord() throws FileNotFoundException {
 		Set<String> keys = categorizedFolder.keySet();
 		for(String key : keys) {
 			File[] files = categorizedFolder.get(key);
@@ -62,8 +78,8 @@ public class Class3 {
 			}
 		}
 	}
-*/	
-	public void read(File file) throws FileNotFoundException {
+	
+	public String read(File file) throws FileNotFoundException {
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		String fullInput = "";
 		String input;
@@ -74,7 +90,8 @@ public class Class3 {
 		} catch(IOException e) {
 			System.out.println(e.getMessage() + "Error reading file");
 		}
-//		System.out.println(fullInput);
+		System.out.println(fullInput);
+		return fullInput;
 	}
 	
 	public String sendQuestion(String message) {
@@ -87,7 +104,7 @@ public class Class3 {
 		return answer;
 	}
 	
-	public static void main(String[]args) {
+	public static void main(String[]args) throws FileNotFoundException {
 		Class3 classifier = new Class3();
 		classifier.run();
 	}

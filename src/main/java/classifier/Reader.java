@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class Reader{
+public class Reader {
 	private String fileLocation;
 	private String fullInput;
 	private String[] tokenizedInput;
@@ -37,6 +37,10 @@ public class Reader{
 	 */
 	public String[] getTokenizedInput() {
 		return tokenizedInput;
+	}
+	
+	public Map<String, Integer> getCountedWords() {
+		return wordCount;
 	}
 	
 	/**

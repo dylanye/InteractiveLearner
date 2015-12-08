@@ -9,13 +9,18 @@ public class Classifier {
 	}
 	
 	public String askFileLocation() {
-		String fileloc = "";
-		System.out.println("What is the location of the file?");
+		String fileloc = sendQuestion("Please, enter the location of the file.");
+		return fileloc;
+	}
+	
+	public String sendQuestion(String message) {
+		System.out.println(message);
+		String answer = "";
 		do {
 			Scanner scanner = new Scanner(System.in);
-			fileloc = scanner.nextLine();
-		} while (fileloc == "");
-		return fileloc;
+			answer = scanner.nextLine();
+		} while (answer == "");
+		return answer;
 	}
 	
 	public static void main(String[] args) {

@@ -13,6 +13,15 @@ public class Classifier {
 		return fileloc;
 	}
 	
+	public String askTrainingOrApply() {
+		String answer = sendQuestion("Do you want to train or apply the learner?(Enter: 'Train' or 'Apply'") ;
+		if(!answer.equals("Train") || !answer.equals("Apply")) {
+			System.out.println("Invalid input please try again.");
+			askTrainingOrApply();
+		}
+		return answer;
+	}
+	
 	public String sendQuestion(String message) {
 		System.out.println(message);
 		String answer = "";

@@ -41,6 +41,8 @@ public class Classifier {
 		return answer;
 	}
 
+	
+	
 	public String sendQuestion(String message) {
 		System.out.println(message);
 		String answer = "";

@@ -6,17 +6,13 @@ import java.util.Scanner;
 public class Classifier {
 	private Reader reader;
 	private String fileLocation;
-    private File[] files;
-	
+
 	public Classifier() {
+		reader = new Reader();
 		run();
 	}
-	
+
 	public void run() {
-        askFileLocation();
-        askTrainingOrApply();
-
-
 		boolean proceed = true;
 		do {
 			try {
@@ -31,14 +27,11 @@ public class Classifier {
 		reader.removeAndCountDoubbles();
 	}
 
-    public
-
-	public File askFileLocation() {
+	public String askFileLocation() {
 		String fileloc = sendQuestion("Please, enter the location of the file.");
-		File folder = new File(fileloc);
-        files = folder.listFiles();
+		return fileloc;
 	}
-	
+
 	public String askTrainingOrApply() {
 		String answer = sendQuestion("Do you want to train or apply the learner?(Enter: 'Train' or 'Apply'") ;
 		if(!answer.equals("Train") || !answer.equals("Apply")) {
@@ -47,7 +40,7 @@ public class Classifier {
 		}
 		return answer;
 	}
-	
+
 	public String sendQuestion(String message) {
 		System.out.println(message);
 		String answer = "";
@@ -57,7 +50,7 @@ public class Classifier {
 		} while (answer == "");
 		return answer;
 	}
-	
+
 	public static void main(String[] args) {
 		Classifier classifier = new Classifier();
 	}

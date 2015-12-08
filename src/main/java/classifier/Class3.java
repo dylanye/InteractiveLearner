@@ -13,21 +13,21 @@ import java.util.Set;
 public class Class3 {
 	private File[] files;
 	private Map<String, File[]> categorizedFolder;
-	private Map<String, Map<String, Integer>> wordCount;
+	private Map<String, Map<String, Integer>> categorizedWordCount;
 	
 	public Class3() {
 		categorizedFolder = new HashMap<String, File[]>();
-		wordCount = new HashMap<String, Map<String, Integer>>();
+		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
 	}
 	
 	public void run() throws FileNotFoundException {
 		while(askAddAnotherCat()) {
-		String cat = askCategory();
-		String folder = askFolderLocation();
-		storeCatFiles(cat, folder);
+			String cat = askCategory();
+			String folder = askFolderLocation();
+			storeCatFiles(cat, folder);
 		}
-		printMap();
 		countWord();
+		printMapMap();
 	}
 	
 	public String askCategory() {
@@ -45,7 +45,6 @@ public class Class3 {
 		boolean proceed = false;
 		do {
 			answer = sendQuestion("Do you want to add another Category?(Yes/No)");
-			System.out.println(!answer.equals("Yes") + "|" + !answer.equals("No"));
 			} while(!answer.equals("Yes") && !answer.equals("No"));
 		if(answer.equals("Yes")) {
 			proceed = true;
@@ -69,14 +68,53 @@ public class Class3 {
 		}
 	}
 	
+	public void printMapMap() {
+		Set<String> keys = categorizedWordCount.keySet();
+		for(String key : keys) {
+			Map<String, Integer> printMap = new HashMap<String, Integer>();
+			printMap = categorizedWordCount.get(key);
+			System.out.println("key: " + key + " inhoud: " + printMap.toString());
+		}
+	}
 	public void countWord() throws FileNotFoundException {
 		Set<String> keys = categorizedFolder.keySet();
 		for(String key : keys) {
 			File[] files = categorizedFolder.get(key);
+			Map<String, Integer> wordCount = new HashMap<String, Integer>();
 			for (int i = 0; i < files.length; i++) {
-				read(files[i]);
+				String text = read(files[i]);
+				String[] tokenizedText = tokenizer(text);
+				
+				wordCount = removeAndCountDoubles(tokenizedText);
+			}
+			categorizedWordCount.put(key, wordCount);	
+		}
+	}
+	
+	public String[] tokenizer(String text) {
+		String[] tokenizedText = text.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
+		for(int i = 0; i < tokenizedText.length; i++) {
+//			System.out.println(tokenizedInput[i]);
+		}
+		return tokenizedText;
+	}
+	
+	public Map<String, Integer> removeAndCountDoubles(String[] tokenizedText) {
+		String currentWord;
+		Map<String, Integer> wordCount = new HashMap<String, Integer>();
+		for(int i = 0; i < tokenizedText.length; i++) {
+			if(wordCount.containsKey(tokenizedText[i]) != true) {
+			currentWord = tokenizedText[i];
+			int counter = 0;
+			for(int j = 0; j < tokenizedText.length; j++) {
+				if (currentWord.equals(tokenizedText[j])) {
+					counter++;
+				}
+			}
+			wordCount.put(currentWord, counter);
 			}
 		}
+		return wordCount;
 	}
 	
 	public String read(File file) throws FileNotFoundException {
@@ -90,7 +128,6 @@ public class Class3 {
 		} catch(IOException e) {
 			System.out.println(e.getMessage() + "Error reading file");
 		}
-		System.out.println(fullInput);
 		return fullInput;
 	}
 	

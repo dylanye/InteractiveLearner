@@ -8,6 +8,7 @@ Add categories and provide the folder path.
 After that, the interactive learner will ask you if you want to predict the probability of a document.
 Provide the document's path.
 
+For part C of the delivarble we still need to add Feature Selection. An example of this will be removing common and meaningless words such as I, the and of.
 
 Christiaan Visscher & Dylan Ye
 Projectgroup 8, module 6 Intelligent Interaction Design

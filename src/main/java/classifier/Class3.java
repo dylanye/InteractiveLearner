@@ -16,6 +16,7 @@ public class Class3 {
 	private File[] files;
 	private Map<String, File[]> categorizedFolder;
 	private Map<String, Map<String, Integer>> categorizedWordCount;
+	private TrainerMultinomial trainer;
 	
 	public Class3() {
 		categorizedFolder = new HashMap<String, File[]>();
@@ -28,7 +29,8 @@ public class Class3 {
 			String folder = askFolderLocation();
 			storeCatFiles(cat, folder);
 		}
-		//countWord();
+        countWord();
+        trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
 		//System.out.println(concatenateAllText("M").toString());
 		//System.out.println(categorizedFolder.toString());
 		//System.out.println(categorizedWordCount.toString());

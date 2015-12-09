@@ -17,9 +17,14 @@ public class TrainerMultinomial {
     private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
 
 
-    public TrainerMultinomial(Map<String, Map<String, Integer>> wordcount, Map<String, File[]> categorizedFolder){
-        this.categorizedWordCount = wordcount;
+    public TrainerMultinomial(Map<String, Map<String, Integer>> categorizedWordCount, Map<String, File[]> categorizedFolder){
+        this.categorizedWordCount = categorizedWordCount;
         this.categorizedFolder = categorizedFolder;
+        try {
+            this.run();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void extractVocabulary(){
@@ -93,15 +98,17 @@ public class TrainerMultinomial {
         int countDoc = countDocuments();
         for (String s : categorizedWordCount.keySet()){
             int countDocPerCat = countDocuments(s);
-            priorC = countDocPerCat/countDoc;
+            priorC = (double)countDocPerCat/(double)countDoc;
             List<String> concatText = concatenateAllText(s);
             for (int i = 0; i < vocabulary.size(); i++){
                 String vocabWord = vocabulary.get(i);
-                double probability = (categorizedWordCount.get(s).get(vocabWord) + 1) / (concatText.size() + 1);
+                double probability = ((double)categorizedWordCount.get(s).get(vocabWord) + 1.0) / ((double)concatText.size() + 1.0);
                 Map<String, Double> temp = new HashMap<String, Double>();
                 temp.put(vocabWord, probability);
                 probMap.put(s, temp);
             }
+            System.out.println("priorC" + priorC);
+
         }
     }
 }

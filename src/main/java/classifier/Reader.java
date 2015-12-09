@@ -8,13 +8,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
-public class Reader{
+public class Reader {
 	private String fullInput;
 	private String[] tokenizedInput;
 	private HashMap<String, Integer> wordCount;
 	public Reader() {
 		fullInput = "";
+		wordCount = new HashMap<String, Integer>();
+
 	} 
 	
 	/**
@@ -31,6 +35,10 @@ public class Reader{
 	 */
 	public String[] getTokenizedInput() {
 		return tokenizedInput;
+	}
+	
+	public Map<String, Integer> getCountedWords() {
+		return wordCount;
 	}
 	
 	/**
@@ -55,16 +63,37 @@ public class Reader{
 	public void tokenizer() {
 		tokenizedInput = fullInput.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
 		for(int i = 0; i < tokenizedInput.length; i++) {
-			System.out.println(tokenizedInput[i]);
+//			System.out.println(tokenizedInput[i]);
 		}
 	}
 	
-	public void removeAndCountDoubbles () {
+	public void removeAndCountDoubbles() {
+		String currentWord;
+		for(int i = 0; i < tokenizedInput.length; i++) {
+			if(wordCount.containsKey(tokenizedInput[i]) != true) {
+			currentWord = tokenizedInput[i];
+			int counter = 0;
+			for(int j = 0; j < tokenizedInput.length; j++) {
+				if (currentWord.equals(tokenizedInput[j])) {
+					counter++;
+				}
+			}
+			wordCount.put(currentWord, counter);
+			}
+		}
+		
+		//test map
+		Set<String> keySet = wordCount.keySet();
+		Object[] keyArray = keySet.toArray();
+		for(int k = 0; k < keyArray.length; k++) {
+			System.out.println(keyArray[k] + ":" + wordCount.get(keyArray[k]).toString());
+		}
 	}
 	
 	public static void main(String[] args) throws IOException {
 		Reader read = new Reader();
 		read.read("C:/MOD6AI/files/blogs/M/M-test3.txt");
 		read.tokenizer();
+		read.removeAndCountDoubbles();
 	}
 }

@@ -23,7 +23,7 @@ public class Class3 {
 		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
 	}
 	
-	public void run() throws FileNotFoundException, InterruptedException {
+	public void run() throws FileNotFoundException {
 		while(askAddAnotherCat()) {
 			String cat = askCategory();
 			String folder = askFolderLocation();
@@ -31,6 +31,11 @@ public class Class3 {
 		}
         countWord();
         trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
+        if(askApplyNow()) {
+        	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
+            System.out.println(list.toString());
+        }
+
 		//System.out.println(concatenateAllText("M").toString());
 		//System.out.println(categorizedFolder.toString());
 		//System.out.println(categorizedWordCount.toString());
@@ -45,7 +50,7 @@ public class Class3 {
 	}
 	
 	public String askCategory() {
-		String answer = sendQuestion("What is the Categorie?");
+		String answer = sendQuestion("What is the Category?");
 		return answer;
 	}
 	
@@ -54,12 +59,30 @@ public class Class3 {
 		return answer;
 	}
 	
+	public File askFileLocation() {
+		String fileloc = sendQuestion("Please, enter the location of the file.");
+		File singleFile = new File(fileloc);
+		return singleFile;
+	}
+	
 	public boolean askAddAnotherCat() {
 		String answer = "";
 		boolean proceed = false;
 		do {
 			answer = sendQuestion("Do you want to add another Category?(Yes/No)");
 			} while(!answer.equals("Yes") && !answer.equals("No"));
+		if(answer.equals("Yes")) {
+			proceed = true;
+		}
+		return proceed;
+	}
+	
+	public boolean askApplyNow() {
+		String answer = "";
+		boolean proceed = false;
+		do {
+			answer = sendQuestion("Do you want to Apply?(Yes/No)");
+		} while(!answer.equals("Yes") && !answer.equals("No"));
 		if(answer.equals("Yes")) {
 			proceed = true;
 		}
@@ -107,6 +130,17 @@ public class Class3 {
 				temp.add(tokenizedText[j]);
 			}
 			result.addAll(temp);
+		}
+		return result;
+	}
+	
+	public List<String> removeDoubles(String[] tokenizedText) {
+		String currentWord;
+		List<String> result = new ArrayList<String>();
+		for(int i = 0; i < tokenizedText.length; i++) {
+			if(!result.contains(tokenizedText[i])) {
+			result.add(tokenizedText[i]);
+			}
 		}
 		return result;
 	}

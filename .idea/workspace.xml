@@ -2,6 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0191a554-8ffa-431c-b076-fc5399cda9b4" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test17.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test18.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test19.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test20.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test21.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test22.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test23.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test24.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test30.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test32.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test35.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test40.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test42.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test45.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test48.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test49.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test50.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test6.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test25.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test26.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test27.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test28.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test29.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test31.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test33.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test34.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test36.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test37.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test38.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test39.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test41.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test43.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test44.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test46.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test47.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test7.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test8.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test9.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" afterPath="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" />
     </list>
     <ignored path="InteractiveLearner.iws" />
@@ -62,7 +112,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Class3.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="34" column="46" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+                  <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1470#1471#0" expanded="true" />
@@ -82,8 +132,8 @@
           <file leaf-file-name="TrainerMultinomial.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.72402596">
-                  <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+                <state vertical-scroll-proportion="0.8291457">
+                  <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#393#401#0" expanded="true" />
@@ -103,16 +153,36 @@
           <file leaf-file-name="ApplyMultinomial.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.72402596">
-                  <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+                <state vertical-scroll-proportion="0.4025559">
+                  <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#275#283#0" expanded="true" />
                     <element signature="e#342#358#0" expanded="true" />
                     <element signature="e#428#457#0" expanded="true" />
                     <element signature="e#1122#1130#0" expanded="true" />
-                    <element signature="e#2231#2247#0" expanded="true" />
+                    <element signature="e#2340#2356#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="F-test4.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/data/test1/F-test4.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="5" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="F-test1.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/data/test1/F-test1.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -135,10 +205,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/fbda69fd-596a-4194-b5cb-229c9c5e8771/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/database/DatabaseController.java" />
         <option value="$PROJECT_DIR$/src/data/test2/F-test1.txt" />
-        <option value="$PROJECT_DIR$/src/data/test1/F-test1.txt" />
         <option value="$PROJECT_DIR$/src/main/java/classifier/Class3.java" />
-        <option value="$PROJECT_DIR$/src/data/test1/F-test4.txt" />
         <option value="$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java" />
+        <option value="$PROJECT_DIR$/src/data/test1/F-test4.txt" />
+        <option value="$PROJECT_DIR$/src/data/test1/F-test1.txt" />
         <option value="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" />
       </list>
     </option>
@@ -275,10 +345,6 @@
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -299,24 +365,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InteractiveLearner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InteractiveLearner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -812,7 +860,7 @@
       <option name="number" value="Default" />
       <updated>1449605525880</updated>
       <workItem from="1449605527245" duration="13553000" />
-      <workItem from="1449619729469" duration="21232000" />
+      <workItem from="1449619729469" duration="27614000" />
     </task>
     <task id="LOCAL-00001" summary="dunno">
       <created>1449668733685</created>
@@ -830,7 +878,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34785000" />
+    <option name="totallyTimeSpent" value="41167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -852,10 +900,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28603104" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27494457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123667374" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120469086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.060234543" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -915,7 +963,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1117,10 +1165,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/test2/F-test1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/test1/F-test1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/test1/F-test4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4025559">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#275#283#0" expanded="true" />
+            <element signature="e#342#358#0" expanded="true" />
+            <element signature="e#428#457#0" expanded="true" />
+            <element signature="e#1122#1130#0" expanded="true" />
+            <element signature="e#2340#2356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Class3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="46" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1470#1471#0" expanded="true" />
@@ -1136,42 +1223,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/F/F-test1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test2/F-test1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test1/F-test1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="100" selection-start-line="0" selection-start-column="100" selection-end-line="0" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test1/F-test4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24837662">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72402596">
-          <caret line="124" column="40" selection-start-line="124" selection-start-column="40" selection-end-line="124" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.8291457">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#393#401#0" expanded="true" />
@@ -1179,21 +1234,6 @@
             <element signature="e#559#575#0" expanded="true" />
             <element signature="e#3634#3650#0" expanded="true" />
             <element signature="e#4208#4224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72402596">
-          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#275#283#0" expanded="true" />
-            <element signature="e#342#358#0" expanded="true" />
-            <element signature="e#428#457#0" expanded="true" />
-            <element signature="e#1122#1130#0" expanded="true" />
-            <element signature="e#2231#2247#0" expanded="true" />
           </folding>
         </state>
       </provider>

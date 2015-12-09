@@ -16,8 +16,7 @@ public class Class3 {
 	private File[] files;
 	private Map<String, File[]> categorizedFolder;
 	private Map<String, Map<String, Integer>> categorizedWordCount;
-	private TrainerMultinomial trainer;
-	
+
 	public Class3() {
 		categorizedFolder = new HashMap<String, File[]>();
 		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
@@ -30,9 +29,10 @@ public class Class3 {
 			storeCatFiles(cat, folder);
 		}
         countWord();
-        trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
+        TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
         if(askApplyNow()) {
         	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
+            ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
             System.out.println(list.toString());
         }
 

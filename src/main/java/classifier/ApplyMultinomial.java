@@ -48,9 +48,11 @@ public class ApplyMultinomial {
     public String argMax(Map<String, Double> map){
         String maxCategory =  null;
         Double maxProbability = 0.0;
+        System.out.println("scoreMap result: "+ map.toString());
         for (String s : map.keySet()){
             if (maxProbability < map.get(s)){
                 maxProbability = map.get(s);
+                maxCategory = s;
             }
         }
         return "Highest probability for category: "+ maxCategory + " with " + maxProbability.toString();
@@ -59,14 +61,15 @@ public class ApplyMultinomial {
     public void run(){
         Map<String, Double> scoreMap = new HashMap<String, Double>();
         for (String s : probMap.keySet()){
-            double score = 0.0;
+            double score = 1.0;
             List<String> tokens = extractTokensFromDoc();
             for (int i = 0; i < tokens.size() - 1; i++){
                 score = score * probMap.get(s).get(tokens.get(i));
             }
             score = score * priorCMap.get(s);
             scoreMap.put(s, score);
+            System.out.println(score);
         }
-        argMax(scoreMap);
+        System.out.println(argMax(scoreMap));
     }
 }

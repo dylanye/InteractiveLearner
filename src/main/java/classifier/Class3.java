@@ -23,7 +23,7 @@ public class Class3 {
 		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
 	}
 	
-	public void run() throws FileNotFoundException {
+	public void run() throws FileNotFoundException, InterruptedException {
 		while(askAddAnotherCat()) {
 			String cat = askCategory();
 			String folder = askFolderLocation();
@@ -153,7 +153,7 @@ public class Class3 {
 		return answer;
 	}
 	
-	public static void main(String[]args) throws FileNotFoundException {
+	public static void main(String[]args) throws FileNotFoundException, InterruptedException {
 		Class3 classifier = new Class3();
 		classifier.run();
 	}

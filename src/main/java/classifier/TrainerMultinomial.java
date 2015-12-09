@@ -97,19 +97,24 @@ public class TrainerMultinomial {
         extractVocabulary();
         int countDoc = countDocuments();
         for (String s : categorizedWordCount.keySet()){
-            System.out.println(categorizedWordCount.toString());
             int countDocPerCat = countDocuments(s);
             priorC = (double)countDocPerCat/(double)countDoc;
             List<String> concatText = concatenateAllText(s);
+            Map<String, Double> tempProbMap = new HashMap<String, Double>();
             for (int i = 0; i < vocabulary.size() - 1; i++){
                 String vocabWord = vocabulary.get(i);
-                double probability = ((double)categorizedWordCount.get(s).get(vocabWord) + 1.0) / ((double)concatText.size() + 1.0);
+                double probability = 0;
+                if (categorizedWordCount.get(s).get(vocabWord) == null) {
+                    probability = ((1.0) / ((double) concatText.size() + 1.0));
+                }
+                else {
+                    probability = ((double) categorizedWordCount.get(s).get(vocabWord) + 1.0) / ((double) concatText.size() + 1.0);
+                }
                 Map<String, Double> temp = new HashMap<String, Double>();
                 temp.put(vocabWord, probability);
-                probMap.put(s, temp);
+                temp.forEach((k, v) -> tempProbMap.merge(k, v, (v1, v2) -> v1 + v2));
             }
-            System.out.println("priorC" + priorC);
-
+            probMap.put(s, tempProbMap);
         }
     }
 }

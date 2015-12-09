@@ -52,6 +52,7 @@ public class ApplyMultinomial {
         for (String s : map.keySet()){
             if(maxProbability == 0.0){
                 maxProbability = map.get(s);
+                maxCategory = s;
             }
             if (maxProbability < map.get(s)){
                 maxProbability = map.get(s);

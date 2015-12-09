@@ -62,8 +62,11 @@ public class ApplyMultinomial {
         Map<String, Double> scoreMap = new HashMap<String, Double>();
         for (String s : probMap.keySet()){
             double score = 1.0;
+            System.out.println("String of probmap" + probMap.toString());
+            double score = 0.0;
             List<String> tokens = extractTokensFromDoc();
             for (int i = 0; i < tokens.size() - 1; i++){
+                System.out.println("token: " + tokens.get(i));
                 score = score * probMap.get(s).get(tokens.get(i));
             }
             score = score * priorCMap.get(s);

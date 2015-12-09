@@ -30,7 +30,7 @@ public class Class3 {
 		}
         countWord();
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
-        if(askApplyNow()) {
+        while(askApplyNow()) {
         	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
             ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
             System.out.println(list.toString());

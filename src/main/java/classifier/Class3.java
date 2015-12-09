@@ -93,7 +93,7 @@ public class Class3 {
 		}
 		return tokenizedText;
 	}
-	
+
 	public List<String> concatenateAllText(String cat) throws FileNotFoundException {
 		List<String> result = new ArrayList<String>();
 		File[] filesFromMap = categorizedFolder.get(cat);
@@ -108,7 +108,7 @@ public class Class3 {
 		}
 		return result;
 	}
-	
+
 	public Map<String, Integer> removeAndCountDoubles(String[] tokenizedText) {
 		String currentWord;
 		Map<String, Integer> wordCount = new HashMap<String, Integer>();
@@ -120,7 +120,7 @@ public class Class3 {
 				if (currentWord.equals(tokenizedText[j])) {
 					counter++;
 				}
-			}
+            }
 			wordCount.put(currentWord, counter);
 			}
 		}

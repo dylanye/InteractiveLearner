@@ -2,6 +2,7 @@ package main.java.classifier;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +13,9 @@ public class TrainerMultinomial {
     private Map<String, File[]> categorizedFolder;
     private Map<String, Map<String, Integer>> categorizedWordCount;
     private List<String> vocabulary = new ArrayList<String>();
+    private double priorC = 0.0 ;
+    private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
+
 
     public TrainerMultinomial(Map<String, Map<String, Integer>> wordcount, Map<String, File[]> categorizedFolder){
         this.categorizedWordCount = wordcount;
@@ -21,7 +25,6 @@ public class TrainerMultinomial {
     public void extractVocabulary(){
         for (Map<String, Integer> m : categorizedWordCount.values()){
             for (String s : m.keySet()){
-                System.out.println("Print string s " + s);
                 vocabulary.add(s);
             }
         }
@@ -45,38 +48,60 @@ public class TrainerMultinomial {
         return count;
     }
 
-    public List<String> concatenateAllText(String s) throws FileNotFoundException {
+    public List<String> concatenateAllText(String cat) throws FileNotFoundException {
         List<String> result = new ArrayList<String>();
-        for (int i = 0; i < categorizedFolder.get(s).length; i++){
-        File[] files = categorizedFolder.get(s);
-            for (int j = 0; j < files.length; j++){
-                BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(files[j])));
-                while (br.){
-
-                }
+        File[] filesFromMap = categorizedFolder.get(cat);
+        for (int i = 0; i < filesFromMap.length; i++) {
+            List<String> temp = new ArrayList<String>();
+            String text = read(filesFromMap[i]);
+            String[] tokenizedText = tokenizer(text);
+            for (int j = 0; j < tokenizedText.length; j++) {
+                temp.add(tokenizedText[j]);
             }
-
+            result.addAll(temp);
         }
         return result;
+    }
+
+    public String read(File file) throws FileNotFoundException {
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        String fullInput = "";
+        String input;
+        try {
+            while ((input = reader.readLine()) != null) {
+                fullInput = fullInput + input;
+            }
+        } catch(IOException e) {
+            System.out.println(e.getMessage() + "Error reading file");
+        }
+        return fullInput;
+    }
+
+    public String[] tokenizer(String text) {
+        String[] tokenizedText = text.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
+        for(int i = 0; i < tokenizedText.length; i++) {
+        }
+        return tokenizedText;
     }
 
     public List<String> getVocabulary(){
         return vocabulary;
     }
 
-    public void run(){
+    public void run() throws FileNotFoundException{
+        extractVocabulary();
         int countDoc = countDocuments();
         for (String s : categorizedWordCount.keySet()){
             int countDocPerCat = countDocuments(s);
-            int priorC = countDocPerCat/countDoc;
-
+            priorC = countDocPerCat/countDoc;
+            List<String> concatText = concatenateAllText(s);
+            for (int i = 0; i < vocabulary.size(); i++){
+                String vocabWord = vocabulary.get(i);
+                double probability = (categorizedWordCount.get(s).get(vocabWord) + 1) / (concatText.size() + 1);
+                Map<String, Double> temp = new HashMap<String, Double>();
+                temp.put(vocabWord, probability);
+                probMap.put(s, temp);
+            }
         }
-
     }
-    //todo V extract all words of one doc
-
-    //todo N count number of docs
-
-    //todo Nc count docs in a class
-
 }

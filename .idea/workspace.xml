@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0191a554-8ffa-431c-b076-fc5399cda9b4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test10.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test14.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test15.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test17.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test18.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test19.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test20.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test21.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test22.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test23.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test24.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test30.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test32.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test35.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test4.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test40.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test42.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test45.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test48.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test49.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test50.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/F/F-test6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test11.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test12.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test13.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test16.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test25.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test26.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test27.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test28.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test29.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test31.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test33.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test34.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test36.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test37.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test38.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test39.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test41.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test43.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test44.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test46.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test47.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test8.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test9.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/classifier/classifier2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/classifier/reader2.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/classifier/Class3.java" afterPath="$PROJECT_DIR$/src/main/java/classifier/Classifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" afterPath="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" />
-    </list>
+    <list default="true" id="0191a554-8ffa-431c-b076-fc5399cda9b4" name="Default" comment="" />
     <ignored path="InteractiveLearner.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -111,11 +56,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5081646">
       <split-first>
         <leaf>
-          <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6745562">
-                  <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+                <state vertical-scroll-proportion="-7.62069">
+                  <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1309#1310#0" expanded="true" />
@@ -128,6 +73,16 @@
                     <element signature="e#3727#3735#0" expanded="true" />
                     <element signature="e#4083#4091#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Reader.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Reader.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="1.0017331">
+                  <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -156,36 +111,16 @@
           <file leaf-file-name="ApplyMultinomial.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3325444">
-                  <caret line="50" column="14" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="14" />
+                <state vertical-scroll-proportion="0.55839413">
+                  <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#275#283#0" expanded="true" />
-                    <element signature="e#342#358#0" expanded="true" />
-                    <element signature="e#428#457#0" expanded="true" />
-                    <element signature="e#1122#1130#0" expanded="true" />
-                    <element signature="e#2373#2389#0" expanded="true" />
+                    <element signature="e#254#262#0" expanded="true" />
+                    <element signature="e#321#337#0" expanded="true" />
+                    <element signature="e#407#436#0" expanded="true" />
+                    <element signature="e#1101#1109#0" expanded="true" />
+                    <element signature="e#2352#2368#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="F-test4.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/data/test1/F-test4.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="5" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="F-test1.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/data/test1/F-test1.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -195,6 +130,7 @@
     </splitter>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -842,7 +778,7 @@
       <option name="number" value="Default" />
       <updated>1449605525880</updated>
       <workItem from="1449605527245" duration="13553000" />
-      <workItem from="1449619729469" duration="28928000" />
+      <workItem from="1449619729469" duration="29447000" />
     </task>
     <task id="LOCAL-00001" summary="dunno">
       <created>1449668733685</created>
@@ -856,11 +792,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449669521140</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed classes">
+      <created>1449683055618</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1449683055618</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42481000" />
+    <option name="totallyTimeSpent" value="43000000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,15 +815,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5021322" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27494457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -941,7 +883,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dunno" />
     <MESSAGE value="little fix in argMax, but still nog working apply" />
-    <option name="LAST_COMMIT_MESSAGE" value="little fix in argMax, but still nog working apply" />
+    <MESSAGE value="Removed classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1057,14 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29462737">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/a5af8ecf/fbda69fd-596a-4194-b5cb-229c9c5e8771/positive_words">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1157,9 +1092,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/test1/F-test4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.09725401">
           <caret line="5" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55839413">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#254#262#0" expanded="true" />
+            <element signature="e#321#337#0" expanded="true" />
+            <element signature="e#407#436#0" expanded="true" />
+            <element signature="e#1101#1109#0" expanded="true" />
+            <element signature="e#2352#2368#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1178,25 +1128,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325444">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#275#283#0" expanded="true" />
-            <element signature="e#342#358#0" expanded="true" />
-            <element signature="e#428#457#0" expanded="true" />
-            <element signature="e#1122#1130#0" expanded="true" />
-            <element signature="e#2373#2389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6745562">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        <state vertical-scroll-proportion="-7.62069">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1309#1310#0" expanded="true" />
@@ -1209,6 +1144,22 @@
             <element signature="e#3727#3735#0" expanded="true" />
             <element signature="e#4083#4091#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0017331">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

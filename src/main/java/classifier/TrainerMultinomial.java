@@ -93,6 +93,14 @@ public class TrainerMultinomial {
         return vocabulary;
     }
 
+    public Map<String, Map<String, Double>> getProbMap(){
+        return probMap;
+    }
+
+    public double getPriorC(){
+        return priorC;
+    }
+    
     public void run() throws FileNotFoundException{
         extractVocabulary();
         int countDoc = countDocuments();

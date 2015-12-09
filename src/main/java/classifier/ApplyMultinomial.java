@@ -32,11 +32,9 @@ public class ApplyMultinomial {
         List<String> result = new ArrayList<String>();
         int index = 0;
         for (int i = 0; i < document.size() - 1; i++ ){
-            for(int j = 0; j < vocabulary.size() - 1; j++){
-                if (document.get(i).equals(vocabulary.get(j))){
-                    result.add(index, document.get(i));
-                    index++;
-                }
+            if (vocabulary.contains(document.get(i))){
+                result.add(index, document.get(i));
+                index++;
             }
         }
         return result;

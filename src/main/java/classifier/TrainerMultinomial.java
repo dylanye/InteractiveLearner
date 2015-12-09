@@ -97,10 +97,11 @@ public class TrainerMultinomial {
         extractVocabulary();
         int countDoc = countDocuments();
         for (String s : categorizedWordCount.keySet()){
+            System.out.println(categorizedWordCount.toString());
             int countDocPerCat = countDocuments(s);
             priorC = (double)countDocPerCat/(double)countDoc;
             List<String> concatText = concatenateAllText(s);
-            for (int i = 0; i < vocabulary.size(); i++){
+            for (int i = 0; i < vocabulary.size() - 1; i++){
                 String vocabWord = vocabulary.get(i);
                 double probability = ((double)categorizedWordCount.get(s).get(vocabWord) + 1.0) / ((double)concatText.size() + 1.0);
                 Map<String, Double> temp = new HashMap<String, Double>();

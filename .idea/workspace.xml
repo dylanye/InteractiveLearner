@@ -52,6 +52,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test7.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test8.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/M/M-test9.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/classifier/classifier2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/classifier/reader2.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/classifier/Class3.java" afterPath="$PROJECT_DIR$/src/main/java/classifier/Classifier.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" afterPath="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" />
     </list>
     <ignored path="InteractiveLearner.iws" />
@@ -108,32 +111,32 @@
     <splitter split-orientation="horizontal" split-proportion="0.5081646">
       <split-first>
         <leaf>
-          <file leaf-file-name="Class3.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Class3.java">
+          <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+                <state vertical-scroll-proportion="0.6745562">
+                  <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1470#1471#0" expanded="true" />
-                    <element signature="e#1501#1502#0" expanded="true" />
-                    <element signature="e#1573#1574#0" expanded="true" />
-                    <element signature="e#1607#1608#0" expanded="true" />
-                    <element signature="e#2988#3005#0" expanded="true" />
-                    <element signature="e#3108#3125#0" expanded="true" />
-                    <element signature="e#3782#3790#0" expanded="true" />
-                    <element signature="e#3932#3940#0" expanded="true" />
-                    <element signature="e#4288#4296#0" expanded="true" />
+                    <element signature="e#1309#1310#0" expanded="true" />
+                    <element signature="e#1340#1341#0" expanded="true" />
+                    <element signature="e#1412#1413#0" expanded="true" />
+                    <element signature="e#1446#1447#0" expanded="true" />
+                    <element signature="e#2827#2844#0" expanded="true" />
+                    <element signature="e#2947#2964#0" expanded="true" />
+                    <element signature="e#3577#3585#0" expanded="true" />
+                    <element signature="e#3727#3735#0" expanded="true" />
+                    <element signature="e#4083#4091#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TrainerMultinomial.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="TrainerMultinomial.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8551136">
-                  <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+                <state vertical-scroll-proportion="-70.344826">
+                  <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#393#401#0" expanded="true" />
@@ -153,8 +156,8 @@
           <file leaf-file-name="ApplyMultinomial.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.37380627">
-                  <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+                <state vertical-scroll-proportion="0.3325444">
+                  <caret line="50" column="14" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="14" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#275#283#0" expanded="true" />
@@ -209,6 +212,7 @@
         <option value="$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java" />
         <option value="$PROJECT_DIR$/src/data/test1/F-test4.txt" />
         <option value="$PROJECT_DIR$/src/data/test1/F-test1.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/classifier/Classifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" />
       </list>
     </option>
@@ -219,8 +223,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -344,50 +350,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InteractiveLearner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InteractiveLearner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InteractiveLearner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InteractiveLearner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ftest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -407,15 +369,15 @@
       <recent name="C:\Users\Dylan Ye\Documents\Development\InteractiveLearner\src\data\test1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Class3">
-    <configuration default="false" name="Class3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Classifier">
+    <configuration default="false" name="Classifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="main.java.classifier.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="main.java.classifier.Class3" />
+      <option name="MAIN_CLASS_NAME" value="main.java.classifier.Classifier" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -859,12 +821,12 @@
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.Class3" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Classifier" />
       <item index="1" class="java.lang.String" itemvalue="Application.DatabaseController" />
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Class3" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Classifier" />
         <item index="1" class="java.lang.String" itemvalue="Application.DatabaseController" />
       </list>
     </recent_temporary>
@@ -880,7 +842,7 @@
       <option name="number" value="Default" />
       <updated>1449605525880</updated>
       <workItem from="1449605527245" duration="13553000" />
-      <workItem from="1449619729469" duration="27917000" />
+      <workItem from="1449619729469" duration="28928000" />
     </task>
     <task id="LOCAL-00001" summary="dunno">
       <created>1449668733685</created>
@@ -898,7 +860,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41470000" />
+    <option name="totallyTimeSpent" value="42481000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -910,7 +872,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1035" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -920,11 +882,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2457879" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27494457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120469086" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13486141" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.060234543" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -936,7 +899,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1027,21 +989,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Class3.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1573#1574#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#2988#3005#0" expanded="true" />
-            <element signature="e#3108#3125#0" expanded="true" />
-            <element signature="e#3782#3790#0" expanded="true" />
-            <element signature="e#3932#3940#0" expanded="true" />
-            <element signature="e#4288#4296#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#2827#2844#0" expanded="true" />
+            <element signature="e#2947#2964#0" expanded="true" />
+            <element signature="e#3577#3585#0" expanded="true" />
+            <element signature="e#3727#3735#0" expanded="true" />
+            <element signature="e#4083#4091#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1092,14 +1054,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7088388">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,29 +1163,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Class3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1573#1574#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#2988#3005#0" expanded="true" />
-            <element signature="e#3108#3125#0" expanded="true" />
-            <element signature="e#3782#3790#0" expanded="true" />
-            <element signature="e#3932#3940#0" expanded="true" />
-            <element signature="e#4288#4296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8551136">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state vertical-scroll-proportion="-70.344826">
+          <caret line="126" column="5" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#393#401#0" expanded="true" />
@@ -1245,8 +1180,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37380627">
-          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.3325444">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#275#283#0" expanded="true" />
@@ -1254,6 +1189,25 @@
             <element signature="e#428#457#0" expanded="true" />
             <element signature="e#1122#1130#0" expanded="true" />
             <element signature="e#2373#2389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6745562">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#2827#2844#0" expanded="true" />
+            <element signature="e#2947#2964#0" expanded="true" />
+            <element signature="e#3577#3585#0" expanded="true" />
+            <element signature="e#3727#3735#0" expanded="true" />
+            <element signature="e#4083#4091#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -69,11 +69,9 @@ public class ApplyMultinomial {
             List<String> tokens = extractTokensFromDoc();
             for (int i = 0; i < tokens.size() - 1; i++){
                 score += Math.log(probMap.get(s).get(tokens.get(i)));
-                System.out.println("stuff " + score);
             }
             score = score + Math.log(priorCMap.get(s));
             scoreMap.put(s, score);
-            System.out.println(score);
         }
         System.out.println(argMax(scoreMap));
     }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4222163249">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - AILearner.sqlite" uuid="fbda69fd-596a-4194-b5cb-229c9c5e8771">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dylan Ye\Documents\Development\InteractiveLearner\Database\AILearner.sqlite</jdbc-url>
+    </data-source>
+  </component>
+</project>

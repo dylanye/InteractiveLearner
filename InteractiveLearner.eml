@@ -3,8 +3,4 @@
 	<output-test url="file://$MODULE_DIR$/out/test/InteractiveLearner"/>
 	<exclude-output/>
 	<contentEntry url="file://$MODULE_DIR$"/>
-	<lib name="sqlite-jdbc-3.8.11.2.jar" scope="COMPILE">
-		<srcroot url="jar://$MODULE_DIR$/Database/sqlite-jdbc-3.8.11.2.jar!/"/>
-		<relative-module-src project-related="jar://$PROJECT_DIR$/Database/sqlite-jdbc-3.8.11.2.jar!/"/>
-	</lib>
 </component>

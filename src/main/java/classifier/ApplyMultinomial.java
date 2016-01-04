@@ -14,7 +14,13 @@ public class ApplyMultinomial {
     private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
     private List<String> document;
 
-
+    /**
+     *
+     * @param vocabulary
+     * @param priorCMap A map containing all the words and its probability.
+     * @param probMap A map containing all the words and its probability
+     * @param document
+     */
     public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, List<String> document){
         this.vocabulary = vocabulary;
         this.priorCMap = priorCMap;

@@ -1,5 +1,8 @@
 package main.java.classifier;
-
+/**
+ * 
+ * @author Christiaan en Dylan
+ */
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,8 +16,13 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Classifier {
-	private File[] files;
+	/**
+	 * A map that where the key represents a category and the value an array of all the files associated with the category.
+	 */
 	private Map<String, File[]> categorizedFolder;
+	/**
+	 * A map where the key represent a category and the value the words in the category with their corresponding quantity.
+	 */
 	private Map<String, Map<String, Integer>> categorizedWordCount;
 
 	public Classifier() {
@@ -31,25 +39,43 @@ public class Classifier {
         countWord();
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
         while(askApplyNow()) {
+        	/*!!!!!!!~~~~ aanpassen voor complete folders!!!!!!~~~~
         	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
             ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
             System.out.println(list.toString());
+        	!!!!!!!~~~~ aanpassen voor complete folders!!!!!!~~~~*/
         }
 	}
 	
+	/**
+	 * Get the current catagorizedFolder
+	 * @return the current catagorizedFolder
+	 */
 	public Map<String, File[]> getCategorizedFolder() {
 		return categorizedFolder;
 	}
 	
+	/**
+	 * Get the current categorizedWordCount
+	 * @return the current categorizedWordCount
+	 */
 	public Map<String, Map<String, Integer>> getCategorizedWordCount() {
 		return categorizedWordCount;
 	}
 	
+	/**
+	 * Asks the user for the name of the category
+	 * @return the string that represent the category
+	 */
 	public String askCategory() {
 		String answer = sendQuestion("What is the Category?");
 		return answer;
 	}
 	
+	/**
+	 * Asks the user for the location of the folder
+	 * @return the string that represents the location of the folder
+	 */
 	public String askFolderLocation() {
 		String answer = sendQuestion("Were are your files located?");
 		return answer;
@@ -87,8 +113,7 @@ public class Classifier {
 	
 	public void storeCatFiles(String Cat, String loc) {
 		File location = new File(loc);
-		files = location.listFiles();
-		categorizedFolder.put(Cat, files);
+		categorizedFolder.put(Cat, location.listFiles());
 	}
 	
 	public void countWord() throws FileNotFoundException {

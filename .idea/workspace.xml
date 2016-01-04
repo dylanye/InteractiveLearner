@@ -32,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ApplyMultinomial.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApplyMultinomial.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.551724">
-              <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+            <state vertical-scroll-proportion="-1.2956204">
+              <caret line="19" column="58" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="58" />
               <folding>
                 <element signature="e#255#263#0" expanded="true" />
                 <element signature="e#2688#2704#0" expanded="true" />
@@ -45,25 +45,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrainerMultinomial.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TrainerMultinomial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7348353">
-              <caret line="174" column="9" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding>
-                <element signature="e#656#664#0" expanded="true" />
-                <element signature="e#734#763#0" expanded="true" />
-                <element signature="e#822#838#0" expanded="true" />
-                <element signature="e#2835#2843#0" expanded="true" />
-                <element signature="e#3006#3014#0" expanded="true" />
-                <element signature="e#4402#4403#0" expanded="true" />
-                <element signature="e#4435#4436#0" expanded="true" />
-                <element signature="e#4494#4495#0" expanded="true" />
-                <element signature="e#4524#4525#0" expanded="true" />
-                <element signature="e#4572#4573#0" expanded="true" />
-                <element signature="e#4604#4605#0" expanded="true" />
-                <element signature="e#5644#5660#0" expanded="true" />
-                <element signature="e#6218#6234#0" expanded="true" />
+                <element signature="e#969#977#0" expanded="true" />
+                <element signature="e#1047#1076#0" expanded="true" />
+                <element signature="e#1135#1151#0" expanded="true" />
+                <element signature="e#3141#3149#0" expanded="true" />
+                <element signature="e#3312#3320#0" expanded="true" />
+                <element signature="e#4708#4709#0" expanded="true" />
+                <element signature="e#4741#4742#0" expanded="true" />
+                <element signature="e#4800#4801#0" expanded="true" />
+                <element signature="e#4830#4831#0" expanded="true" />
+                <element signature="e#4878#4879#0" expanded="true" />
+                <element signature="e#4910#4911#0" expanded="true" />
+                <element signature="e#5950#5966#0" expanded="true" />
+                <element signature="e#6524#6540#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <caret line="34" column="78" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="78" />
               <folding>
                 <element signature="e#1309#1310#0" expanded="true" />
                 <element signature="e#1340#1341#0" expanded="true" />
@@ -713,12 +713,12 @@
       <created>1451940223562</created>
       <option name="number" value="Default" />
       <updated>1451940223562</updated>
-      <workItem from="1451940225928" duration="2473000" />
+      <workItem from="1451940225928" duration="2626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2473000" />
+    <option name="totallyTimeSpent" value="2626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
@@ -796,7 +796,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <caret line="34" column="78" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="78" />
           <folding>
             <element signature="e#1309#1310#0" expanded="true" />
             <element signature="e#1340#1341#0" expanded="true" />
@@ -812,35 +812,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.551724">
-          <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding>
-            <element signature="e#255#263#0" expanded="true" />
-            <element signature="e#2688#2704#0" expanded="true" />
+            <element signature="e#969#977#0" expanded="true" />
+            <element signature="e#1047#1076#0" expanded="true" />
+            <element signature="e#1135#1151#0" expanded="true" />
+            <element signature="e#3141#3149#0" expanded="true" />
+            <element signature="e#3312#3320#0" expanded="true" />
+            <element signature="e#4708#4709#0" expanded="true" />
+            <element signature="e#4741#4742#0" expanded="true" />
+            <element signature="e#4800#4801#0" expanded="true" />
+            <element signature="e#4830#4831#0" expanded="true" />
+            <element signature="e#4878#4879#0" expanded="true" />
+            <element signature="e#4910#4911#0" expanded="true" />
+            <element signature="e#5950#5966#0" expanded="true" />
+            <element signature="e#6524#6540#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7348353">
-          <caret line="174" column="9" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
+        <state vertical-scroll-proportion="-1.2956204">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="58" />
           <folding>
-            <element signature="e#656#664#0" expanded="true" />
-            <element signature="e#734#763#0" expanded="true" />
-            <element signature="e#822#838#0" expanded="true" />
-            <element signature="e#2835#2843#0" expanded="true" />
-            <element signature="e#3006#3014#0" expanded="true" />
-            <element signature="e#4402#4403#0" expanded="true" />
-            <element signature="e#4435#4436#0" expanded="true" />
-            <element signature="e#4494#4495#0" expanded="true" />
-            <element signature="e#4524#4525#0" expanded="true" />
-            <element signature="e#4572#4573#0" expanded="true" />
-            <element signature="e#4604#4605#0" expanded="true" />
-            <element signature="e#5644#5660#0" expanded="true" />
-            <element signature="e#6218#6234#0" expanded="true" />
+            <element signature="e#255#263#0" expanded="true" />
+            <element signature="e#2688#2704#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -12,8 +12,11 @@ import java.util.Map;
 public class TrainerMultinomial {
 
     /**
-     * priorCMap is a map with the category as key and its according priorC as value.
-     * probMap is a map with all the probabilities of the words per category as the key. So every key (category) will contain values of maps<word, probability>
+     * categorizedFolder Contains a map of the category as the key and an array of Files as value.
+     * categorizedWordCount A map with the class as key and a map<string, integer> as value. The map contains the word and the count of the word in the category.
+     * priorCMap Is a map with the category as key and its according priorC as value.
+     * probMap Is a map with all the probabilities of the words per category as the key. So every key (category) will contain values of maps<word, probability>
+     * vocabulary All the words, including doubles.
      */
     private Map<String, File[]> categorizedFolder;
     private Map<String, Map<String, Integer>> categorizedWordCount;
@@ -22,7 +25,6 @@ public class TrainerMultinomial {
     private Map<String, Double> priorCMap = new HashMap<String, Double>();
 
     /**
-     *
      * @param categorizedWordCount A map with the class as key and a map<string, integer> as value. The map contains the word and the count of the word in the category.
      * @param categorizedFolder Contains a map of the category as the key and an array of Files as value.
      */

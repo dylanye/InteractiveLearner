@@ -9,6 +9,7 @@ import java.util.Map;
  * Created by dylan on 6-12-15.
  */
 public class ApplyMultinomial {
+
     private List<String> vocabulary = new ArrayList<String>();
     private Map<String, Double> priorCMap = new HashMap<String, Double>();
     private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
@@ -16,10 +17,10 @@ public class ApplyMultinomial {
 
     /**
      *
-     * @param vocabulary
+     * @param vocabulary All the words, including doubles.
      * @param priorCMap A map containing all the words and its probability.
-     * @param probMap A map containing all the words and its probability
-     * @param document
+     * @param probMap A map containing all the words and its probability.
+     * @param document A list of all the documents.
      */
     public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, List<String> document){
         this.vocabulary = vocabulary;
@@ -30,7 +31,7 @@ public class ApplyMultinomial {
     }
 
     /**
-     * Checks if the words in the document are present in the vocabulary. The provided document contains no duplicates.
+     * Checks if the words in the document are present in the vocabulary.
      * @return a list of words both present in the document AND the vocabulary.
      */
     public List<String> extractTokensFromDoc(){
@@ -67,6 +68,9 @@ public class ApplyMultinomial {
         return "Highest probability for category: "+ maxCategory + " with probability" + maxProbability;
     }
 
+    /**
+     * This method will check for the best fitting category of the provided file.
+     */
     public void run(){
         Map<String, Double> scoreMap = new HashMap<String, Double>();
         for (String s : probMap.keySet()){

@@ -47,7 +47,7 @@ public class TrainerMultinomial {
                 vocabulary.add(s);
             }
         }
-        System.out.println(vocabulary.toString());
+        System.out.println("Trainer class, vocabulary print " + vocabulary.toString());
     }
 
     /**

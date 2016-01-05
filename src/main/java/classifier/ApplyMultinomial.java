@@ -13,16 +13,16 @@ public class ApplyMultinomial {
     private List<String> vocabulary = new ArrayList<String>();
     private Map<String, Double> priorCMap = new HashMap<String, Double>();
     private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
-    private List<String> docWords;
+    private String[] docWords;
 
     /**
      *
      * @param vocabulary All the words, including doubles.
      * @param priorCMap A map containing all the categories and its probability.
      * @param probMap A map containing all the words and its probability.
-     * @param list A list of all the words of the applying document.
+     * @param list A string array of all the words of the applying document. Contains doubles.
      */
-    public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, List<String> list){
+    public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, String[] list){
         this.vocabulary = vocabulary;
         this.priorCMap = priorCMap;
         this.probMap = probMap;
@@ -37,9 +37,10 @@ public class ApplyMultinomial {
     public List<String> extractTokensFromDoc(){
         List<String> result = new ArrayList<String>();
         int index = 0;
-        for (int i = 0; i < docWords.size() - 1; i++ ){
-            if (vocabulary.contains(docWords.get(i))){
-                result.add(index, docWords.get(i));
+        System.out.println("docwords array" + docWords.toString());
+        for (int i = 0; i < docWords.length - 1; i++ ){
+            if (vocabulary.contains(docWords[i])){
+                result.add(index, docWords[i]);
                 index++;
             }
         }
@@ -60,7 +61,7 @@ public class ApplyMultinomial {
                 maxProbability = map.get(s);
                 maxCategory = s;
             }
-            if (maxProbability < map.get(s)){
+            if (maxProbability > map.get(s)){
                 maxProbability = map.get(s);
                 maxCategory = s;
             }
@@ -70,6 +71,7 @@ public class ApplyMultinomial {
 
     /**
      * This method will check for the best fitting category of the provided file.
+     * If the word occurs in the vocabulary it will add its probability to the score. Reoccurring words will be added multiple times depending on the occurrence with the same probability.
      */
     public void run(){
         Map<String, Double> scoreMap = new HashMap<String, Double>();

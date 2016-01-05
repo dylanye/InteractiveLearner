@@ -46,7 +46,7 @@ public class Classifier {
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
         String applyOrACC = askApplyACC();
         if(applyOrACC.equals("apply")) {
-           	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
+           	String[] list = tokenizer(read(askFileLocation()));
             ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
         }
         if(applyOrACC.equals("acc")) {

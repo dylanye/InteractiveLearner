@@ -33,16 +33,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApplyMultinomial.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApplyMultinomial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.36674815">
-              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
               <folding>
                 <element signature="e#322#338#0" expanded="true" />
                 <element signature="e#408#437#0" expanded="true" />
-                <element signature="e#1358#1366#0" expanded="true" />
-                <element signature="e#2707#2723#0" expanded="true" />
+                <element signature="e#1376#1384#0" expanded="true" />
+                <element signature="e#2973#2989#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,30 +51,30 @@
       <file leaf-file-name="TrainerMultinomial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+            <state vertical-scroll-proportion="-8.379311">
+              <caret line="136" column="50" selection-start-line="136" selection-start-column="50" selection-end-line="136" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Classifier.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.21675774">
+              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2788#2789#0" expanded="true" />
-                <element signature="e#2819#2820#0" expanded="true" />
-                <element signature="e#2987#2988#0" expanded="true" />
-                <element signature="e#3021#3022#0" expanded="true" />
-                <element signature="e#4856#4873#0" expanded="true" />
-                <element signature="e#4976#4993#0" expanded="true" />
-                <element signature="e#5606#5614#0" expanded="true" />
-                <element signature="e#5756#5764#0" expanded="true" />
-                <element signature="e#6090#6098#0" expanded="true" />
-                <element signature="e#6404#6421#0" expanded="true" />
+                <element signature="e#2769#2770#0" expanded="true" />
+                <element signature="e#2800#2801#0" expanded="true" />
+                <element signature="e#2968#2969#0" expanded="true" />
+                <element signature="e#3002#3003#0" expanded="true" />
+                <element signature="e#4837#4854#0" expanded="true" />
+                <element signature="e#4957#4974#0" expanded="true" />
+                <element signature="e#5587#5595#0" expanded="true" />
+                <element signature="e#5737#5745#0" expanded="true" />
+                <element signature="e#6071#6079#0" expanded="true" />
+                <element signature="e#6385#6402#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,9 +95,9 @@
       <list>
         <option value="$PROJECT_DIR$/InteractiveLearner.iml" />
         <option value="$PROJECT_DIR$/.classpath" />
-        <option value="$PROJECT_DIR$/src/main/java/classifier/Classifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java" />
         <option value="$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java" />
+        <option value="$PROJECT_DIR$/src/main/java/classifier/Classifier.java" />
       </list>
     </option>
   </component>
@@ -257,6 +257,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="tokenizer&#9;PSI&#9;JAVA://main.java.classifier.TrainerMultinomial#tokenizer" />
   </component>
   <component name="RunManager" selected="Application.Classifier">
     <configuration default="false" name="Classifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -710,12 +711,12 @@
       <updated>1451940223562</updated>
       <workItem from="1451940225928" duration="2626000" />
       <workItem from="1451948933905" duration="736000" />
-      <workItem from="1452018638990" duration="1862000" />
+      <workItem from="1452018638990" duration="2890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5224000" />
+    <option name="totallyTimeSpent" value="6252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
@@ -723,11 +724,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32815966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -738,7 +740,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -773,8 +774,8 @@
           <folding>
             <element signature="e#322#338#0" expanded="true" />
             <element signature="e#408#437#0" expanded="true" />
-            <element signature="e#1358#1366#0" expanded="true" />
-            <element signature="e#2707#2723#0" expanded="true" />
+            <element signature="e#1376#1384#0" expanded="true" />
+            <element signature="e#2973#2989#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,16 +794,16 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-            <element signature="e#2987#2988#0" expanded="true" />
-            <element signature="e#3021#3022#0" expanded="true" />
-            <element signature="e#4856#4873#0" expanded="true" />
-            <element signature="e#4976#4993#0" expanded="true" />
-            <element signature="e#5606#5614#0" expanded="true" />
-            <element signature="e#5756#5764#0" expanded="true" />
-            <element signature="e#6090#6098#0" expanded="true" />
-            <element signature="e#6404#6421#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#3002#3003#0" expanded="true" />
+            <element signature="e#4837#4854#0" expanded="true" />
+            <element signature="e#4957#4974#0" expanded="true" />
+            <element signature="e#5587#5595#0" expanded="true" />
+            <element signature="e#5737#5745#0" expanded="true" />
+            <element signature="e#6071#6079#0" expanded="true" />
+            <element signature="e#6385#6402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,8 +815,8 @@
           <folding>
             <element signature="e#322#338#0" expanded="true" />
             <element signature="e#408#437#0" expanded="true" />
-            <element signature="e#1358#1366#0" expanded="true" />
-            <element signature="e#2707#2723#0" expanded="true" />
+            <element signature="e#1376#1384#0" expanded="true" />
+            <element signature="e#2973#2989#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -834,16 +835,16 @@
           <caret line="34" column="78" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-            <element signature="e#2987#2988#0" expanded="true" />
-            <element signature="e#3021#3022#0" expanded="true" />
-            <element signature="e#4856#4873#0" expanded="true" />
-            <element signature="e#4976#4993#0" expanded="true" />
-            <element signature="e#5606#5614#0" expanded="true" />
-            <element signature="e#5756#5764#0" expanded="true" />
-            <element signature="e#6090#6098#0" expanded="true" />
-            <element signature="e#6404#6421#0" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#3002#3003#0" expanded="true" />
+            <element signature="e#4837#4854#0" expanded="true" />
+            <element signature="e#4957#4974#0" expanded="true" />
+            <element signature="e#5587#5595#0" expanded="true" />
+            <element signature="e#5737#5745#0" expanded="true" />
+            <element signature="e#6071#6079#0" expanded="true" />
+            <element signature="e#6385#6402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -876,43 +877,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2819#2820#0" expanded="true" />
-            <element signature="e#2987#2988#0" expanded="true" />
-            <element signature="e#3021#3022#0" expanded="true" />
-            <element signature="e#4856#4873#0" expanded="true" />
-            <element signature="e#4976#4993#0" expanded="true" />
-            <element signature="e#5606#5614#0" expanded="true" />
-            <element signature="e#5756#5764#0" expanded="true" />
-            <element signature="e#6090#6098#0" expanded="true" />
-            <element signature="e#6404#6421#0" expanded="true" />
+            <element signature="e#322#338#0" expanded="true" />
+            <element signature="e#408#437#0" expanded="true" />
+            <element signature="e#1376#1384#0" expanded="true" />
+            <element signature="e#2973#2989#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/classifier/TrainerMultinomial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+        <state vertical-scroll-proportion="-8.379311">
+          <caret line="136" column="50" selection-start-line="136" selection-start-column="50" selection-end-line="136" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/ApplyMultinomial.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/classifier/Classifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.36674815">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.21675774">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
           <folding>
-            <element signature="e#322#338#0" expanded="true" />
-            <element signature="e#408#437#0" expanded="true" />
-            <element signature="e#1358#1366#0" expanded="true" />
-            <element signature="e#2707#2723#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2968#2969#0" expanded="true" />
+            <element signature="e#3002#3003#0" expanded="true" />
+            <element signature="e#4837#4854#0" expanded="true" />
+            <element signature="e#4957#4974#0" expanded="true" />
+            <element signature="e#5587#5595#0" expanded="true" />
+            <element signature="e#5737#5745#0" expanded="true" />
+            <element signature="e#6071#6079#0" expanded="true" />
+            <element signature="e#6385#6402#0" expanded="true" />
           </folding>
         </state>
       </provider>

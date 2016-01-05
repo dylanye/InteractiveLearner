@@ -1,6 +1,6 @@
 package main.java.classifier;
 /**
- * 
+ *
  * @author Christiaan en Dylan
  */
 import java.io.BufferedReader;
@@ -36,7 +36,7 @@ public class Classifier {
 		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
 	    fileWords = new HashMap<File, String[]>();
 	}
-	
+
 	public void run() throws FileNotFoundException {
 		while(askAddAnotherCat()) {
 			String cat = askCategory();
@@ -59,18 +59,41 @@ public class Classifier {
                 String[] wordArray= tokenizer(read(fileArray[i]));
                 fileWords.put(fileArray[i], wordArray);
             }
-            for (File file : fileWords.keySet()) {
-                new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(fileWords.get(file)));
-                System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+
+            //Create resultmap
+            //Resultmap has the category and the number of files that the apply method has decided that it was the best category.
+            Map<String, Integer> resultMap = new HashMap<String, Integer>();
+            for (String category : categorizedWordCount.keySet()) {
+                resultMap.put(category, 0);
             }
 
-            // Files are correctly added
-//            System.out.println("File Array" + fileArray.toString());
-//            System.out.println("File map" + fileWords.toString());
+            //Apply all the files
+            for (File file : fileWords.keySet()) {
+                ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(fileWords.get(file)));
+                //Fill resultmap with scores
+                for (String category : resultMap.keySet()) {
+                    if (category.equals(apply.getBestCategory())) {
+                        int temp = resultMap.get(category);
+                        temp++;
+                        resultMap.put(category, temp);
+                    }
+                }
+            }
+
+            //Result of accuracy
+            for (String category : resultMap.keySet()){
+                double categoryAccuracy;
+                int totalFiles = fileArray.length;
+                categoryAccuracy = (double) resultMap.get(category) / (double) totalFiles;
+                System.out.println("Accuracy for category: " + category + " is: " + categoryAccuracy + "%");
+            }
+            System.out.println(resultMap.toString());
+
+
 
         }
-        
-        
+
+
        // while(askApplyNow()) {
         	/*!!!!!!!~~~~ aanpassen voor complete folders!!!!!!~~~~
         	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
@@ -79,7 +102,7 @@ public class Classifier {
         	!!!!!!!~~~~ aanpassen voor complete folders!!!!!!~~~~*/
        // }
 	}
-	
+
 	/**
 	 * Get the current catagorizedFolder
 	 * @return the current catagorizedFolder
@@ -87,7 +110,7 @@ public class Classifier {
 	public Map<String, File[]> getCategorizedFolder() {
 		return categorizedFolder;
 	}
-	
+
 	/**
 	 * Get the current categorizedWordCount
 	 * @return the current categorizedWordCount
@@ -95,7 +118,7 @@ public class Classifier {
 	public Map<String, Map<String, Integer>> getCategorizedWordCount() {
 		return categorizedWordCount;
 	}
-	
+
 	/**
 	 * Asks the user for the name of the category
 	 * @return the string that represent the category
@@ -104,7 +127,7 @@ public class Classifier {
 		String answer = sendQuestion("What is the Category?");
 		return answer;
 	}
-	
+
 	/**
 	 * Asks the user for the location of the folder
 	 * @return the string that represents the location of the folder
@@ -113,13 +136,13 @@ public class Classifier {
 		String answer = sendQuestion("Were are your files located?");
 		return answer;
 	}
-	
+
 	public File askFileLocation() {
 		String fileloc = sendQuestion("Please, enter the location of the file.");
 		File singleFile = new File(fileloc);
 		return singleFile;
 	}
-	
+
 	public boolean askAddAnotherCat() {
 		String answer = "";
 		boolean proceed = false;
@@ -131,7 +154,7 @@ public class Classifier {
 		}
 		return proceed;
 	}
-	
+
 	public boolean askApplyNow() {
 		String answer = "";
 		boolean proceed = false;
@@ -143,7 +166,7 @@ public class Classifier {
 		}
 		return proceed;
 	}
-	
+
 	public String askApplyACC() {
 		String answer = "";
 		do {
@@ -151,12 +174,12 @@ public class Classifier {
 		} while(!answer.equals("apply") && !answer.equals("acc"));
 		return answer;
 	}
-	
+
 	public void storeCatFiles(String Cat, String loc) {
 		File location = new File(loc);
 		categorizedFolder.put(Cat, location.listFiles());
 	}
-	
+
 	public void countWord() throws FileNotFoundException {
 		Set<String> keys = categorizedFolder.keySet();
 		for(String key : keys) {
@@ -169,10 +192,10 @@ public class Classifier {
 				wordCount = removeAndCountDoubles(tokenizedText);
 				wordCount.forEach((k, v) -> result.merge(k, v, (v1, v2) -> v1 + v2));
 			}
-			categorizedWordCount.put(key, result);				
+			categorizedWordCount.put(key, result);
 		}
 	}
-	
+
 	public String[] tokenizer(String text) {
 		String[] tokenizedText = text.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
 		for(int i = 0; i < tokenizedText.length; i++) {
@@ -194,7 +217,7 @@ public class Classifier {
 		}
 		return result;
 	}
-	
+
 	public List<String> removeDoubles(String[] tokenizedText) {
 		List<String> result = new ArrayList<String>();
 		for(int i = 0; i < tokenizedText.length; i++) {
@@ -222,21 +245,21 @@ public class Classifier {
 		}
 		return wordCount;
 	}
-	
+
 	public String read(File file) throws FileNotFoundException {
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		String fullInput = "";
 		String input;
 		try {
 			while ((input = reader.readLine()) != null) {
-				fullInput = fullInput + input;		
+				fullInput = fullInput + input;
 				}
 		} catch(IOException e) {
 			System.out.println(e.getMessage() + "Error reading file");
 		}
 		return fullInput;
 	}
-	
+
 	public String sendQuestion(String message) {
 		System.out.println(message);
 		String answer = "";
@@ -246,7 +269,7 @@ public class Classifier {
 		} while (answer == "");
 		return answer;
 	}
-	
+
 	  public void featureSelectionTrainer() throws FileNotFoundException {
 	        for(String category : categorizedWordCount.keySet()) {
 	            for (String word : categorizedWordCount.get(category).keySet()){
@@ -273,7 +296,7 @@ public class Classifier {
         return result;
 
 	}
-	
+
 	public static void main(String[]args) throws FileNotFoundException, InterruptedException {
 		Classifier classifier = new Classifier();
 		classifier.run();

@@ -11,6 +11,7 @@ public class ApplyMultinomial {
     private Map<String, Double> priorCMap = new HashMap<String, Double>();
     private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
     private List<String> docWords;
+    protected String maxCategory;
 
     /**
      *
@@ -44,13 +45,17 @@ public class ApplyMultinomial {
         return result;
     }
 
+    public String getBestCategory(){
+        return maxCategory;
+    }
+
     /**
      * Gives the highest probability over all the categories.
      * @param map A map with all the categories and its probability
      * @return The category with highest probability. If probability is equal of two categories, first one will be returned.
      */
     public String argMax(Map<String, Double> map){
-        String maxCategory =  null;
+        maxCategory =  null;
         double maxProbability = 0.0;
         System.out.println("Results (higher is better): "+ map.toString());
         for (String s : map.keySet()){
@@ -72,7 +77,6 @@ public class ApplyMultinomial {
      */
     public void run(){
         Map<String, Double> scoreMap = new HashMap<String, Double>();
-        System.out.println("Probmap nullpointer" + probMap.toString());
         for (String s : probMap.keySet()){
             double score = 0.0;
             List<String> tokens = extractTokensFromDoc();

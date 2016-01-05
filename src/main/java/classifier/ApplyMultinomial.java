@@ -10,16 +10,16 @@ public class ApplyMultinomial {
     private List<String> vocabulary = new ArrayList<String>();
     private Map<String, Double> priorCMap = new HashMap<String, Double>();
     private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
-    private String[] docWords;
+    private List<String> docWords;
 
     /**
      *
      * @param vocabulary All the words, including doubles.
      * @param priorCMap A map containing all the categories and its probability.
      * @param probMap A map containing all the words and its probability.
-     * @param list A string array of all the words of the applying document. Contains doubles.
+     * @param list A list array of all the words of the applying document. Contains doubles.
      */
-    public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, String[] list){
+    public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, List<String> list){
         this.vocabulary = vocabulary;
         this.priorCMap = priorCMap;
         this.probMap = probMap;
@@ -34,10 +34,10 @@ public class ApplyMultinomial {
     public List<String> extractTokensFromDoc(){
         List<String> result = new ArrayList<String>();
         int index = 0;
-        System.out.println("docwords array" + Arrays.toString(docWords));
-        for (int i = 0; i < docWords.length - 1; i++ ){
-            if (vocabulary.contains(docWords[i])){
-                result.add(index, docWords[i]);
+        System.out.println("Apply, docwords list" + docWords.toString());
+        for (int i = 0; i < docWords.size(); i++ ){
+            if (vocabulary.contains(docWords.get(i))){
+                result.add(index, docWords.get(i));
                 index++;
             }
         }
@@ -52,7 +52,7 @@ public class ApplyMultinomial {
     public String argMax(Map<String, Double> map){
         String maxCategory =  null;
         double maxProbability = 0.0;
-        System.out.println("Results (higher is better): "+ map.toString());
+        System.out.println("Results (lower is better): "+ map.toString());
         for (String s : map.keySet()){
             if(maxProbability == 0.0){
                 maxProbability = map.get(s);

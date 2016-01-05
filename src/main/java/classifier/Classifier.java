@@ -28,8 +28,10 @@ public class Classifier {
      * A map where the key is the file and the value a list of all the words in the file.
      */
     private Map<File, List<String>> fileWords;
-    
-	public Classifier() {
+
+    private String[] commonWords = new String[]{"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at"};
+
+    public Classifier() {
 		categorizedFolder = new HashMap<String, File[]>();
 		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
 	    fileWords = new HashMap<File, List<String>>();
@@ -42,12 +44,12 @@ public class Classifier {
 			storeCatFiles(cat, folder);
 		}
         countWord();
-        featureSelection();
+        featureSelectionTrainer();
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
         String applyOrACC = askApplyACC();
         if(applyOrACC.equals("apply")) {
            	String[] list = tokenizer(read(askFileLocation()));
-            ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
+            new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
         }
         if(applyOrACC.equals("acc")) {
             String folderACC = askFolderLocation();
@@ -236,18 +238,32 @@ public class Classifier {
 		return answer;
 	}
 	
-	  public void featureSelection() throws FileNotFoundException {
-	        String[] featureSelection = new String[]{"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at"};
+	  public void featureSelectionTrainer() throws FileNotFoundException {
 	        for(String category : categorizedWordCount.keySet()) {
 	            for (String word : categorizedWordCount.get(category).keySet()){
-	                for (int i = 0; i < featureSelection.length; i++){
-	                    if (featureSelection.equals(word)){
+	                for (int i = 0; i < commonWords.length; i++){
+	                    if (commonWords.equals(word)){
 	                        categorizedWordCount.get(category).remove(word);
 	                    }
 	                }
 	            }
 	        }
 	    }
+
+	public List<String> featureSelectionApply(String[] words) throws FileNotFoundException {
+        List<String> result = new ArrayList<String>();
+        int index = 0;
+        for (int i = 0; i < commonWords.length; i++){
+            for (int j = 0; j < words.length; j++){
+                if (!words[j].equals(commonWords[i])){
+                    result.add(index, words[j]);
+                    index++;
+                }
+            }
+        }
+        return result;
+
+	}
 	
 	public static void main(String[]args) throws FileNotFoundException, InterruptedException {
 		Classifier classifier = new Classifier();

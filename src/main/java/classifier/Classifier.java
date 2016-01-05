@@ -198,8 +198,6 @@ public class Classifier {
 
 	public String[] tokenizer(String text) {
 		String[] tokenizedText = text.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
-		for(int i = 0; i < tokenizedText.length; i++) {
-		}
 		return tokenizedText;
 	}
 

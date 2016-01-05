@@ -24,10 +24,15 @@ public class Classifier {
 	 * A map where the key represent a category and the value the words in the category with their corresponding quantity.
 	 */
 	private Map<String, Map<String, Integer>> categorizedWordCount;
-
+    /**
+     * A map where the key is the file and the value a list of all the words in the file.
+     */
+    private Map<File, List<String>> fileWords;
+    
 	public Classifier() {
 		categorizedFolder = new HashMap<String, File[]>();
 		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
+	    fileWords = new HashMap<File, List<String>>();
 	}
 	
 	public void run() throws FileNotFoundException {
@@ -39,13 +44,19 @@ public class Classifier {
         countWord();
         featureSelection();
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
-        if(askApplyACC().equals("apply")) {
+        String applyOrACC = askApplyACC();
+        if(applyOrACC.equals("apply")) {
            	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
             ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
-            System.out.println(list.toString());
         }
-        if(askApplyACC().equals("acc")) {
-        	String folderACC = askFolderLocation();
+        if(applyOrACC.equals("acc")) {
+            String folderACC = askFolderLocation();
+            File loc = new File(folderACC);
+            File[] fileArray = loc.listFiles();
+            for(int i = 0; i < fileArray.length; i++) {
+                List<String> wordList= removeDoubles(tokenizer(read(fileArray[i])));
+                fileWords.put(fileArray[i], wordList);
+            }
         }    
         
         

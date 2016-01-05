@@ -37,14 +37,25 @@ public class Classifier {
 			storeCatFiles(cat, folder);
 		}
         countWord();
+        featureSelection();
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
-        while(askApplyNow()) {
+        if(askApplyACC().equals("apply")) {
+           	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
+            ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
+            System.out.println(list.toString());
+        }
+        if(askApplyACC().equals("acc")) {
+        	String folderACC = askFolderLocation();
+        }    
+        
+        
+       // while(askApplyNow()) {
         	/*!!!!!!!~~~~ aanpassen voor complete folders!!!!!!~~~~
         	List<String> list = removeDoubles(tokenizer(read(askFileLocation())));
             ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), list);
             System.out.println(list.toString());
         	!!!!!!!~~~~ aanpassen voor complete folders!!!!!!~~~~*/
-        }
+       // }
 	}
 	
 	/**
@@ -111,6 +122,14 @@ public class Classifier {
 		return proceed;
 	}
 	
+	public String askApplyACC() {
+		String answer = "";
+		do {
+			answer = sendQuestion("Do you want to apply or determine the accurancy?(type: apply/acc)");
+		} while(!answer.equals("apply") && !answer.equals("acc"));
+		return answer;
+	}
+	
 	public void storeCatFiles(String Cat, String loc) {
 		File location = new File(loc);
 		categorizedFolder.put(Cat, location.listFiles());
@@ -155,7 +174,6 @@ public class Classifier {
 	}
 	
 	public List<String> removeDoubles(String[] tokenizedText) {
-		String currentWord;
 		List<String> result = new ArrayList<String>();
 		for(int i = 0; i < tokenizedText.length; i++) {
 			if(!result.contains(tokenizedText[i])) {
@@ -206,6 +224,19 @@ public class Classifier {
 		} while (answer == "");
 		return answer;
 	}
+	
+	  public void featureSelection() throws FileNotFoundException {
+	        String[] featureSelection = new String[]{"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at"};
+	        for(String category : categorizedWordCount.keySet()) {
+	            for (String word : categorizedWordCount.get(category).keySet()){
+	                for (int i = 0; i < featureSelection.length; i++){
+	                    if (featureSelection.equals(word)){
+	                        categorizedWordCount.get(category).remove(word);
+	                    }
+	                }
+	            }
+	        }
+	    }
 	
 	public static void main(String[]args) throws FileNotFoundException, InterruptedException {
 		Classifier classifier = new Classifier();

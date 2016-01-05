@@ -1,9 +1,6 @@
 package main.java.classifier;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by dylan on 6-12-15.
@@ -37,7 +34,7 @@ public class ApplyMultinomial {
     public List<String> extractTokensFromDoc(){
         List<String> result = new ArrayList<String>();
         int index = 0;
-        System.out.println("docwords array" + docWords.toString());
+        System.out.println("docwords array" + Arrays.toString(docWords));
         for (int i = 0; i < docWords.length - 1; i++ ){
             if (vocabulary.contains(docWords[i])){
                 result.add(index, docWords[i]);

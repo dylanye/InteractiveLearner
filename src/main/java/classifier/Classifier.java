@@ -138,20 +138,8 @@ public class Classifier {
         boolean proceed = false;
         do {
             answer = sendQuestion("Do you want to add another Category?(Yes/No)");
-        } while(!answer.equals("Yes") && !answer.equals("No"));
-        if(answer.equals("Yes")) {
-            proceed = true;
-        }
-        return proceed;
-    }
-
-    public boolean askApplyNow() {
-        String answer = "";
-        boolean proceed = false;
-        do {
-            answer = sendQuestion("Do you want to Apply?(Yes/No)");
-        } while(!answer.equals("Yes") && !answer.equals("No"));
-        if(answer.equals("Yes")) {
+        } while(!answer.equals("Yes") && !answer.equals("No") && !answer.equals("yes") && !answer.equals("no"));
+        if(answer.equals("Yes") || answer.equals("yes")) {
             proceed = true;
         }
         return proceed;
@@ -160,8 +148,8 @@ public class Classifier {
     public String askApplyACC() {
         String answer = "";
         do {
-            answer = sendQuestion("Do you want to apply or determine the accurancy?(type: apply/acc)");
-        } while(!answer.equals("apply") && !answer.equals("acc"));
+            answer = sendQuestion("Do you want to apply or determine the accurancy?(type: Apply/Acc)");
+        } while(!answer.equals("Apply") && !answer.equals("Acc") && !answer.equals("apply") && !answer.equals("acc"));
         return answer;
     }
 

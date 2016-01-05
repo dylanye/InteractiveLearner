@@ -13,33 +13,33 @@ public class ApplyMultinomial {
     private List<String> vocabulary = new ArrayList<String>();
     private Map<String, Double> priorCMap = new HashMap<String, Double>();
     private Map<String, Map<String, Double>> probMap = new HashMap<String, Map<String, Double>>();
-    private List<String> document;
+    private List<String> docWords;
 
     /**
      *
      * @param vocabulary All the words, including doubles.
-     * @param priorCMap A map containing all the words and its probability.
+     * @param priorCMap A map containing all the categories and its probability.
      * @param probMap A map containing all the words and its probability.
-     * @param document A list of all the documents.
+     * @param list A list of all the words of the applying document.
      */
-    public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, List<String> document){
+    public ApplyMultinomial(List<String> vocabulary, Map<String, Double> priorCMap, Map<String, Map<String, Double>> probMap, List<String> list){
         this.vocabulary = vocabulary;
         this.priorCMap = priorCMap;
         this.probMap = probMap;
-        this.document = document;
+        this.docWords = list;
         this.run();
     }
 
     /**
-     * Checks if the words in the document are present in the vocabulary.
-     * @return a list of words both present in the document AND the vocabulary.
+     * Checks if the words in the list are present in the vocabulary.
+     * @return a list of words both present in the applying document AND the vocabulary.
      */
     public List<String> extractTokensFromDoc(){
         List<String> result = new ArrayList<String>();
         int index = 0;
-        for (int i = 0; i < document.size() - 1; i++ ){
-            if (vocabulary.contains(document.get(i))){
-                result.add(index, document.get(i));
+        for (int i = 0; i < docWords.size() - 1; i++ ){
+            if (vocabulary.contains(docWords.get(i))){
+                result.add(index, docWords.get(i));
                 index++;
             }
         }

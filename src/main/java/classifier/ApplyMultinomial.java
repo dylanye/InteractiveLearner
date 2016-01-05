@@ -34,7 +34,7 @@ public class ApplyMultinomial {
     public List<String> extractTokensFromDoc(){
         List<String> result = new ArrayList<String>();
         int index = 0;
-        System.out.println("Apply, docwords list" + docWords.toString());
+//        System.out.println("Apply, docwords list" + docWords.toString());
         for (int i = 0; i < docWords.size(); i++ ){
             if (vocabulary.contains(docWords.get(i))){
                 result.add(index, docWords.get(i));
@@ -52,13 +52,13 @@ public class ApplyMultinomial {
     public String argMax(Map<String, Double> map){
         String maxCategory =  null;
         double maxProbability = 0.0;
-        System.out.println("Results (lower is better): "+ map.toString());
+        System.out.println("Results (higher is better): "+ map.toString());
         for (String s : map.keySet()){
             if(maxProbability == 0.0){
                 maxProbability = map.get(s);
                 maxCategory = s;
             }
-            if (maxProbability > map.get(s)){
+            if (maxProbability < map.get(s)){
                 maxProbability = map.get(s);
                 maxCategory = s;
             }
@@ -72,10 +72,11 @@ public class ApplyMultinomial {
      */
     public void run(){
         Map<String, Double> scoreMap = new HashMap<String, Double>();
+        System.out.println("Probmap nullpointer" + probMap.toString());
         for (String s : probMap.keySet()){
             double score = 0.0;
             List<String> tokens = extractTokensFromDoc();
-            for (int i = 0; i < tokens.size() - 1; i++){
+            for (int i = 0; i < tokens.size(); i++){
                 score += Math.log(probMap.get(s).get(tokens.get(i)));
             }
             score = score + Math.log(priorCMap.get(s));

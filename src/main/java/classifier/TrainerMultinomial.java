@@ -160,7 +160,7 @@ public class TrainerMultinomial {
             List<String> concatText = concatenateAllText(s);
             //tempProbMap contains a word and the probability
             Map<String, Double> tempProbMap = new HashMap<String, Double>();
-            for (int i = 0; i < vocabulary.size() - 1; i++){
+            for (int i = 0; i < vocabulary.size(); i++){
                 String vocabWord = vocabulary.get(i);
                 double probability = 0;
                 if (categorizedWordCount.get(s).get(vocabWord) == null) {

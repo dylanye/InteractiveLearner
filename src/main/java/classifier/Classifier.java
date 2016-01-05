@@ -27,14 +27,14 @@ public class Classifier {
     /**
      * A map where the key is the file and the value a list of all the words in the file.
      */
-    private Map<File, List<String>> fileWords;
+    private Map<File, String[]> fileWords;
 
     private String[] commonWords = new String[]{"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at"};
 
     public Classifier() {
 		categorizedFolder = new HashMap<String, File[]>();
 		categorizedWordCount = new HashMap<String, Map<String, Integer>>();
-	    fileWords = new HashMap<File, List<String>>();
+	    fileWords = new HashMap<File, String[]>();
 	}
 	
 	public void run() throws FileNotFoundException {
@@ -56,10 +56,19 @@ public class Classifier {
             File loc = new File(folderACC);
             File[] fileArray = loc.listFiles();
             for(int i = 0; i < fileArray.length; i++) {
-                List<String> wordList= removeDoubles(tokenizer(read(fileArray[i])));
-                fileWords.put(fileArray[i], wordList);
+                String[] wordArray= tokenizer(read(fileArray[i]));
+                fileWords.put(fileArray[i], wordArray);
             }
-        }    
+            for (File file : fileWords.keySet()) {
+                new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(fileWords.get(file)));
+                System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+            }
+
+            // Files are correctly added
+//            System.out.println("File Array" + fileArray.toString());
+//            System.out.println("File map" + fileWords.toString());
+
+        }
         
         
        // while(askApplyNow()) {

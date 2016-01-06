@@ -201,7 +201,6 @@ public class TrainerMultinomial {
             File[] oldFileArray = categorizedFolder.get(cat);
             File[] newFile = updateFileMap.get(cat);
             for (int index = 0; index < tempFileArray.length; index++) {
-                System.out.println("index = "+index);
                 if (index < tempFileArray.length) {
                     tempFileArray[index] = oldFileArray[index];
                 }

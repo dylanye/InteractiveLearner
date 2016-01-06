@@ -30,7 +30,7 @@ public class Classifier {
         categorizedFolder = new HashMap<String, File[]>();
         categorizedWordCount = new HashMap<String, Map<String, Integer>>();
         fileWords = new HashMap<File, String[]>();
-        File commonWordsFile = new File("C:\\Users\\Dylan Ye\\Documents\\Development\\InteractiveLearner\\src\\data\\google-10000-english.txt");
+        File commonWordsFile = new File("D:/Eclipse/git/InteractiveLearner/src/data/google-10000-english.txt");
         try(BufferedReader br = new BufferedReader(new FileReader(commonWordsFile))) {
             List<String> temp = new ArrayList<String>();
             int index = 0;
@@ -56,51 +56,52 @@ public class Classifier {
         countWord();
         featureSelectionTrainer();
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
-        String applyOrACC = askApplyACC();
-        if(applyOrACC.equals("apply")) {
-            String[] list = tokenizer(read(askFileLocation()));
-            new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
-        }
-        if(applyOrACC.equals("acc")) {
-            String folderACC = askFolderLocation();
-            File loc = new File(folderACC);
-            File[] fileArray = loc.listFiles();
-            for(int i = 0; i < fileArray.length; i++) {
-                String[] wordArray= tokenizer(read(fileArray[i]));
-                fileWords.put(fileArray[i], wordArray);
+        do {
+        	String applyOrACC = askApplyACC().toLowerCase();
+            if(applyOrACC.equals("apply")) {
+                String[] list = tokenizer(read(askFileLocation()));
+                new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
             }
+            if(applyOrACC.equals("acc")) {
+                String folderACC = askFolderLocation();
+                File loc = new File(folderACC);
+                File[] fileArray = loc.listFiles();
+                for(int i = 0; i < fileArray.length; i++) {
+                    String[] wordArray= tokenizer(read(fileArray[i]));
+                    fileWords.put(fileArray[i], wordArray);
+                }
 
-            //Create resultmap
-            //Resultmap has the category and the number of files that the apply method has decided that it was the best category.
-            Map<String, Integer> resultMap = new HashMap<String, Integer>();
-            for (String category : categorizedWordCount.keySet()) {
-                resultMap.put(category, 0);
-            }
+                //Create resultmap
+                //Resultmap has the category and the number of files that the apply method has decided that it was the best category.
+                Map<String, Integer> resultMap = new HashMap<String, Integer>();
+                for (String category : categorizedWordCount.keySet()) {
+                    resultMap.put(category, 0);
+                }
 
-            //Apply all the files
-            for (File file : fileWords.keySet()) {
-                ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(fileWords.get(file)));
-                //Fill resultmap with scores
-                for (String category : resultMap.keySet()) {
-                    if (category.equals(apply.getBestCategory())) {
-                        int temp = resultMap.get(category);
-                        temp++;
-                        resultMap.put(category, temp);
+                //Apply all the files
+                for (File file : fileWords.keySet()) {
+                    ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(fileWords.get(file)));
+                    //Fill resultmap with scores
+                    for (String category : resultMap.keySet()) {
+                        if (category.equals(apply.getBestCategory())) {
+                            int temp = resultMap.get(category);
+                            temp++;
+                            resultMap.put(category, temp);
+                        }
                     }
                 }
+
+                //Result of accuracy
+                for (String category : resultMap.keySet()){
+                    double categoryAccuracy;
+                    int totalFiles = fileArray.length;
+                    categoryAccuracy = (double) resultMap.get(category) / (double) totalFiles;
+                    System.out.println("Accuracy for category: " + category + " is: " + categoryAccuracy + "%");
+                }
+                System.out.println(resultMap.toString());
+
             }
-
-            //Result of accuracy
-            for (String category : resultMap.keySet()){
-                double categoryAccuracy;
-                int totalFiles = fileArray.length;
-                categoryAccuracy = (double) resultMap.get(category) / (double) totalFiles;
-                System.out.println("Accuracy for category: " + category + " is: " + categoryAccuracy + "%");
-            }
-            System.out.println(resultMap.toString());
-
-        }
-
+        } while (askContinue());
     }
 
     /**
@@ -154,11 +155,23 @@ public class Classifier {
         }
         return proceed;
     }
-
+    
+    public boolean askContinue() {
+    	String answer = "";
+    	boolean proceed = false;
+    	do{ 
+    		answer = sendQuestion("Do you want to apply again?(Yes/No");
+    	} while(!answer.equals("Yes") && !answer.equals("No") && !answer.equals("yes") && !answer.equals("no"));
+        if(answer.equals("Yes") || answer.equals("yes")) {
+            proceed = true;
+        }
+    	return proceed;
+    }
+    
     public String askApplyACC() {
         String answer = "";
         do {
-            answer = sendQuestion("Do you want to apply or determine the accurancy?(type: Apply/Acc)");
+            answer = sendQuestion("Do you want to apply one file or determine the accurancy of a folder?(type: Apply/Acc)");
         } while(!answer.equals("Apply") && !answer.equals("Acc") && !answer.equals("apply") && !answer.equals("acc"));
         return answer;
     }

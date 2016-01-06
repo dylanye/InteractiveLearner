@@ -24,8 +24,6 @@ public class Classifier {
      */
     private Map<File, String[]> fileWords;
 
-    private String[] commonWords = new String[]{"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at"};
-
     private String[] googleCommonWords;
 
     public Classifier() throws FileNotFoundException {
@@ -42,10 +40,11 @@ public class Classifier {
             }
             googleCommonWords = new String[temp.size()];
             googleCommonWords = temp.toArray(googleCommonWords);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(Arrays.toString(googleCommonWords));
+        System.out.println(Arrays.asList(googleCommonWords).toString());
     }
 
     public void run() throws FileNotFoundException {
@@ -219,7 +218,7 @@ public class Classifier {
         String currentWord;
         Map<String, Integer> wordCount = new HashMap<String, Integer>();
         for(int i = 0; i < tokenizedText.length; i++) {
-            if(wordCount.containsKey(tokenizedText[i]) != true) {
+            if(!wordCount.containsKey(tokenizedText[i])) {
                 currentWord = tokenizedText[i];
                 int counter = 0;
                 for(int j = 0; j < tokenizedText.length; j++) {
@@ -258,21 +257,18 @@ public class Classifier {
     }
 
     public void featureSelectionTrainer() throws FileNotFoundException {
-        List<String> list = new ArrayList<String>();
-        int index = 0;
+
+        Map<String, Map<String, Integer>> result = new HashMap<String, Map<String, Integer>>();
         for(String category : categorizedWordCount.keySet()) {
-            for (String word : categorizedWordCount.get(category).keySet()){
-                System.out.println(word);
-                for (int i = 0; i < googleCommonWords.length; i++){
-                    if (Arrays.asList(googleCommonWords).contains(word)){
-                        categorizedWordCount.get(category).remove(word);
-                        list.add(index, word);
-                        index++;
-                    }
+            Map<String, Integer> wordCountMap = new HashMap<String, Integer>();
+            for (String word : categorizedWordCount.get(category).keySet()) {
+                if (!Arrays.asList(googleCommonWords).contains(word)){
+                    wordCountMap.put(word, categorizedWordCount.get(category).get(word));
                 }
             }
+            result.put(category, wordCountMap);
         }
-        System.out.println("XXXXXXXXXXXX" + list.toString());
+        categorizedWordCount = result;
     }
 
     public List<String> featureSelectionApply(String[] words) throws FileNotFoundException {

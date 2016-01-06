@@ -35,7 +35,6 @@ public class ApplyMultinomial {
     public List<String> extractTokensFromDoc(){
         List<String> result = new ArrayList<String>();
         int index = 0;
-//        System.out.println("Apply, docwords list" + docWords.toString());
         for (int i = 0; i < docWords.size(); i++ ){
             if (vocabulary.contains(docWords.get(i))){
                 result.add(index, docWords.get(i));

@@ -1,6 +1,5 @@
 package main.java.classifier;
 /**
- *
  * @author Christiaan Visscher en Dylan Ye
  */
 import java.io.BufferedReader;
@@ -35,7 +34,10 @@ public class Classifier {
     private List<String> categoryList;
 
     private String[] featureSelection;
-
+    /**
+     * 
+     * @throws FileNotFoundException
+     */
     public Classifier() throws FileNotFoundException {
         categorizedFolder = new HashMap<String, File[]>();
         categorizedWordCount = new HashMap<String, Map<String, Integer>>();
@@ -142,7 +144,11 @@ public class Classifier {
     public Map<String, Map<String, Integer>> getCategorizedWordCount() {
         return categorizedWordCount;
     }
-
+    
+    /**
+     * Get a list of all categories
+     * @return the current categoryList
+     */
     public List<String> getCategoryList() {
     	return categoryList;
     }
@@ -164,13 +170,22 @@ public class Classifier {
         String answer = sendQuestion("Were are your files located?");
         return answer;
     }
-
+    
+    /**
+     * Asks the user for the location of a file and returns the file
+     * @return the file
+     */
     public File askFileLocation() {
         String fileloc = sendQuestion("Please, enter the location of the file.");
         File singleFile = new File(fileloc);
         return singleFile;
     }
-
+    
+    /**
+     * Asks the user if it wants to add another category
+     * @return a boolean true when the user wants to add another category or 
+     * 		   			 false when the user does not want to add another category
+     */
     public boolean askAddAnotherCat() {
         String answer = "";
         boolean proceed = false;
@@ -182,7 +197,12 @@ public class Classifier {
         }
         return proceed;
     }
-
+    
+    /**
+     * Asks if the user wants to continue
+     * @return a boolean true if the user wants to continue
+     * 					 false if the user does not want to continue
+     */
     public boolean askContinue() {
     	String answer = "";
     	boolean proceed = false;
@@ -194,15 +214,24 @@ public class Classifier {
         }
     	return proceed;
     }
-
+    
+    /**
+     * Asks if the user wants to apply or do the accuracy test
+     * @return a string acc if the user wants to do the accuracy test
+     * 					apply if the user wants to apply 
+     */
     public String askApplyACC() {
         String answer = "";
         do {
-            answer = sendQuestion("Do you want to apply one file or determine the accurancy of a folder?(type: Apply/Acc)");
+            answer = sendQuestion("Do you want to apply one file or determine the accuracy of a folder?(type: Apply/Acc)");
         } while(!answer.toLowerCase().equals("apply") && !answer.toLowerCase().equals("acc"));
         return answer;
     }
-
+    /**
+     * Asks if category is correct and if it is not it i will ask for the correct category
+     * @param predictedCat the predicted category by the InteractiveLearner
+     * @return the correct category;
+     */
     public String askCorrectCat(String predictedCat) {
     	String answer = "";
     	String answerCorrectCat = "";
@@ -224,12 +253,20 @@ public class Classifier {
     	}
     	return answerCorrectCat;
     }
-
+    /**
+     * It stores the categories in a map with the corresponding files
+     * @param Cat the category of the file
+     * @param loc the location of the file
+     */
     public void storeCatFiles(String Cat, String loc) {
         File location = new File(loc);
         categorizedFolder.put(Cat, location.listFiles());
     }
-
+    
+    /**
+     * It fills a map with categories as key and a map existing of words and their occurrences as value
+     * @throws FileNotFoundException if a file cannot be found
+     */
     public void countWord() throws FileNotFoundException {
         Set<String> keys = categorizedFolder.keySet();
         for(String key : keys) {
@@ -245,7 +282,12 @@ public class Classifier {
             categorizedWordCount.put(key, result);
         }
     }
-
+    
+    /**
+     * It tokenizes a texts.
+     * @param text the text from a file
+     * @return a tokenized text
+     */
     public String[] tokenizer(String text) {
         String[] tokenizedText = text.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
         return tokenizedText;
@@ -268,7 +310,13 @@ public class Classifier {
         }
         return wordCount;
     }
-
+    
+    /**
+     * It reads the text of a file
+     * @param file a file
+     * @return a string which contains the text of a file
+     * @throws FileNotFoundException if a file cannot be found
+     */
     public String read(File file) throws FileNotFoundException {
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String fullInput = "";
@@ -282,7 +330,12 @@ public class Classifier {
         }
         return fullInput;
     }
-
+    
+    /**
+     * Sends a messages to the console and waits for the answer of the user
+     * @param message a string that contains the message that needs to be send to the console
+     * @return the answer of the user
+     */
     public String sendQuestion(String message) {
         System.out.println(message);
         String answer = "";

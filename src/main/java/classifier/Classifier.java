@@ -293,6 +293,10 @@ public class Classifier {
         return answer;
     }
 
+    /**
+     * Removes the words based on the FeatureSelection.txt before training.
+     * @throws FileNotFoundException
+     */
     public void featureSelectionTrainer() throws FileNotFoundException {
 
         Map<String, Map<String, Integer>> result = new HashMap<String, Map<String, Integer>>();
@@ -308,6 +312,12 @@ public class Classifier {
         categorizedWordCount = result;
     }
 
+    /**
+     * Removes the words based on the FeatureSelection.txt before applying.
+     * @param words An array of strings of the applying document.
+     * @return A list.
+     * @throws FileNotFoundException
+     */
     public List<String> featureSelectionApply(String[] words) throws FileNotFoundException {
         List<String> result = new ArrayList<String>();
         int index = 0;

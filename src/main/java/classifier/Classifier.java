@@ -28,7 +28,7 @@ public class Classifier {
      */
     private List<String> categoryList;
 
-    private String[] googleCommonWords;
+    private String[] featureSelection;
 
     public Classifier() throws FileNotFoundException {
         categorizedFolder = new HashMap<String, File[]>();
@@ -42,13 +42,12 @@ public class Classifier {
                 temp.add(index, line);
                 index++;
             }
-            googleCommonWords = new String[temp.size()];
-            googleCommonWords = temp.toArray(googleCommonWords);
+            featureSelection = new String[temp.size()];
+            featureSelection = temp.toArray(featureSelection);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(Arrays.asList(googleCommonWords).toString());
     }
 
     public void run() throws FileNotFoundException {
@@ -67,6 +66,7 @@ public class Classifier {
             if(applyOrACC.toLowerCase().equals("apply")) {
             	File fileLoc = askFileLocation();
                 String[] list = tokenizer(read(fileLoc));
+                System.out.println(fileLoc.getPath());
                 ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
                 String correctCat = askCorrectCat(apply.getBestCategory());
                 categorizedFolder = new HashMap<String, File[]>();
@@ -96,6 +96,7 @@ public class Classifier {
 
                 //Apply all the files
                 for (File file : fileWords.keySet()) {
+                    System.out.println(file.getPath());
                     ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(fileWords.get(file)));
                     //Fill resultmap with scores
                     for (String category : resultMap.keySet()) {
@@ -317,7 +318,7 @@ public class Classifier {
         for(String category : categorizedWordCount.keySet()) {
             Map<String, Integer> wordCountMap = new HashMap<String, Integer>();
             for (String word : categorizedWordCount.get(category).keySet()) {
-                if (!Arrays.asList(googleCommonWords).contains(word)){
+                if (!Arrays.asList(featureSelection).contains(word)){
                     wordCountMap.put(word, categorizedWordCount.get(category).get(word));
                 }
             }
@@ -331,7 +332,7 @@ public class Classifier {
         int index = 0;
 
         for (int i = 0; i < words.length; i++){
-            if (!Arrays.asList(googleCommonWords).contains(words[i])) {
+            if (!Arrays.asList(featureSelection).contains(words[i])) {
                 result.add(index, words[i]);
                 index++;
             }

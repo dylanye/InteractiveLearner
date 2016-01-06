@@ -56,7 +56,6 @@ public class ApplyMultinomial {
     public String argMax(Map<String, Double> map){
         maxCategory =  null;
         double maxProbability = 0.0;
-        System.out.println("Results (higher is better): "+ map.toString());
         for (String s : map.keySet()){
             if(maxProbability == 0.0){
                 maxProbability = map.get(s);
@@ -71,11 +70,37 @@ public class ApplyMultinomial {
     }
 
     /**
+     * Removes words that do not occur very often in the document.
+     */
+    public void removeRareWords(){
+        String currentWord;
+        //If the word has a occurrence of less than "percentage" then disregard the word in the calculation of the probability.
+        double percentage = 0.005;
+        Map<String, Integer> rareWordCountMap = new HashMap<String, Integer>();
+        for(int i = 0; i < docWords.size(); i++) {
+            if(!rareWordCountMap.containsKey(docWords.get(i))) {
+                currentWord = docWords.get(i);
+                int counter = 0;
+                for(int j = 0; j < docWords.size(); j++) {
+                    if (currentWord.equals(docWords.get(j))) {
+                        counter++;
+                    }
+                }
+                if ( (double)counter/(double)docWords.size() > percentage ) {
+                    rareWordCountMap.put(currentWord, counter);
+                }
+            }
+        }
+        docWords = new ArrayList<String>(rareWordCountMap.keySet());
+    }
+
+    /**
      * This method will check for the best fitting category of the provided file.
      * If the word occurs in the vocabulary it will add its probability to the score. Reoccurring words will be added multiple times depending on the occurrence with the same probability.
      */
     public void run(){
         Map<String, Double> scoreMap = new HashMap<String, Double>();
+        removeRareWords();
         for (String s : probMap.keySet()){
             double score = 0.0;
             List<String> tokens = extractTokensFromDoc();

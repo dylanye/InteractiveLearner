@@ -82,7 +82,7 @@ public class ApplyMultinomial {
             for (int i = 0; i < tokens.size(); i++){
                 score += Math.log10(probMap.get(s).get(tokens.get(i)))/Math.log10(2);
             }
-            score = score + Math.log10(priorCMap.get(s)/Math.log10(2));
+            score = score + Math.log10(priorCMap.get(s))/Math.log10(2);
             scoreMap.put(s, score);
         }
         System.out.println(argMax(scoreMap));

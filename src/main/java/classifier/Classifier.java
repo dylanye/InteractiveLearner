@@ -23,13 +23,17 @@ public class Classifier {
      * A map where the key is the file and the value a list of all the words in the file.
      */
     private Map<File, String[]> fileWords;
+    /**
+     * List of all the categories
+     */
+    private List<String> categoryList;
 
     private String[] googleCommonWords;
 
     public Classifier() throws FileNotFoundException {
         categorizedFolder = new HashMap<String, File[]>();
         categorizedWordCount = new HashMap<String, Map<String, Integer>>();
-        File commonWordsFile = new File("./src/data/commonwords.txt");
+        File commonWordsFile = new File("./src/data/FeatureSelection.txt");
         try(BufferedReader br = new BufferedReader(new FileReader(commonWordsFile))) {
             List<String> temp = new ArrayList<String>();
             int index = 0;
@@ -50,6 +54,7 @@ public class Classifier {
         while(askAddAnotherCat()) {
             String cat = askCategory();
             String folder = askFolderLocation();
+            categoryList.add(cat);
             storeCatFiles(cat, folder);
         }
         countWord();
@@ -129,6 +134,10 @@ public class Classifier {
     public Map<String, Map<String, Integer>> getCategorizedWordCount() {
         return categorizedWordCount;
     }
+    
+    public List<String> getCategoryList() {
+    	return categoryList;
+    }
 
     /**
      * Asks the user for the name of the category
@@ -189,15 +198,14 @@ public class Classifier {
     public String askCorrectCat(String predictedCat) {
     	String answer = "";
     	String answerCorrectCat = "";
-    	Set<String> categories = categorizedWordCount.keySet();
     	boolean proceed = false;
     	do {
     		answer = sendQuestion("Is the predicted class correct?(Yes/No)");
     	} while(!answer.toLowerCase().equals("yes") && !answer.toLowerCase().equals("no"));
     	if(answer.toLowerCase().equals("no")) {
     		do {
-    			answerCorrectCat = sendQuestion("What is the correct category? (case sensitive)" + "\n" + "Choose from: " + categories.toString());
-    			for (String category : categories) {
+    			answerCorrectCat = sendQuestion("What is the correct category? (case sensitive)" + "\n" + "Choose from: " + categoryList.toString());
+    			for (String category : categoryList) {
     				if(answerCorrectCat.equals(category)) {
     					proceed = true;
     				}

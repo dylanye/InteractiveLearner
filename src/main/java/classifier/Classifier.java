@@ -159,7 +159,7 @@ public class Classifier {
         boolean proceed = false;
         do {
             answer = sendQuestion("Do you want to add another Category?(Yes/No)");
-    	} while(!answer.toLowerCase().equals("yes") && answer.toLowerCase().equals("no"));
+    	} while(!answer.toLowerCase().equals("yes") && !answer.toLowerCase().equals("no"));
         if(answer.toLowerCase().equals("yes")) {
             proceed = true;
         }
@@ -171,7 +171,7 @@ public class Classifier {
     	boolean proceed = false;
     	do{ 
     		answer = sendQuestion("Do you want to apply again?(Yes/No)");
-    	} while(!answer.toLowerCase().equals("yes") && answer.toLowerCase().equals("no"));
+    	} while(!answer.toLowerCase().equals("yes") && !answer.toLowerCase().equals("no"));
         if(answer.toLowerCase().equals("yes")) {
             proceed = true;
         }

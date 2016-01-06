@@ -58,12 +58,12 @@ public class Classifier {
         do {
         	String applyOrACC = askApplyACC().toLowerCase();
             fileWords = new HashMap<File, String[]>();
-            if(applyOrACC.equals("apply")) {
+            if(applyOrACC.toLowerCase().equals("apply")) {
                 String[] list = tokenizer(read(askFileLocation()));
                 ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
                 askCorrectCat(apply.getBestCategory());
             }
-            if(applyOrACC.equals("acc")) {
+            if(applyOrACC.toLowerCase().equals("acc")) {
                 String folderACC = askFolderLocation();
                 File loc = new File(folderACC);
                 File[] fileArray = loc.listFiles();
@@ -150,8 +150,8 @@ public class Classifier {
         boolean proceed = false;
         do {
             answer = sendQuestion("Do you want to add another Category?(Yes/No)");
-        } while(!answer.equals("Yes") && !answer.equals("No") && !answer.equals("yes") && !answer.equals("no"));
-        if(answer.equals("Yes") || answer.equals("yes")) {
+    	} while(!answer.toLowerCase().equals("yes") && answer.toLowerCase().equals("no"));
+        if(answer.toLowerCase().equals("yes")) {
             proceed = true;
         }
         return proceed;
@@ -162,8 +162,8 @@ public class Classifier {
     	boolean proceed = false;
     	do{ 
     		answer = sendQuestion("Do you want to apply again?(Yes/No)");
-    	} while(!answer.equals("Yes") && !answer.equals("No") && !answer.equals("yes") && !answer.equals("no"));
-        if(answer.equals("Yes") || answer.equals("yes")) {
+    	} while(!answer.toLowerCase().equals("yes") && answer.toLowerCase().equals("no"));
+        if(answer.toLowerCase().equals("yes")) {
             proceed = true;
         }
     	return proceed;
@@ -173,7 +173,7 @@ public class Classifier {
         String answer = "";
         do {
             answer = sendQuestion("Do you want to apply one file or determine the accurancy of a folder?(type: Apply/Acc)");
-        } while(!answer.equals("Apply") && !answer.equals("Acc") && !answer.equals("apply") && !answer.equals("acc"));
+        } while(!answer.toLowerCase().equals("apply") && !answer.toLowerCase().equals("acc"));
         return answer;
     }
     

@@ -190,7 +190,6 @@ public class TrainerMultinomial {
                 //If the "word" does not exist in the categorizedWordCount map, then add the "word" to the map with its count.
                 else {
                     categorizedWordCount.get(cat).put(word, updateWordCountMap.get(cat).get(word));
-
                 }
             }
         }
@@ -198,16 +197,12 @@ public class TrainerMultinomial {
         //Go over the category of the to be added map. This should only be 1 category.
         for (String cat : updateFileMap.keySet()){
             //Create a temp file array of
-            File[] tempFileArray = new File[categorizedFolder.get(cat).length + 1];
+            File[] tempFileArray = new File[categorizedFolder.get(cat).length];
             File[] oldFileArray = categorizedFolder.get(cat);
             File[] newFile = updateFileMap.get(cat);
-            System.out.println("tempfile " + tempFileArray.length);
-            System.out.println("old " + oldFileArray.length);
-            System.out.println("new " + newFile.length);
-
             for (int index = 0; index < tempFileArray.length; index++) {
                 System.out.println("index = "+index);
-                if (index < tempFileArray.length - 1) {
+                if (index < tempFileArray.length) {
                     tempFileArray[index] = oldFileArray[index];
                 }
                 else {

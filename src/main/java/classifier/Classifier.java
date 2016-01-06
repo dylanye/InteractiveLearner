@@ -196,7 +196,7 @@ public class Classifier {
     	} while(!answer.toLowerCase().equals("yes") && !answer.toLowerCase().equals("no"));
     	if(answer.toLowerCase().equals("no")) {
     		do {
-    			answerCorrectCat = sendQuestion("What is the correct category?" + "\n" + "Choose from: " + categories.toString());
+    			answerCorrectCat = sendQuestion("What is the correct category? (case sensitive)" + "\n" + "Choose from: " + categories.toString());
     			for (String category : categories) {
     				if(answerCorrectCat.equals(category)) {
     					proceed = true;

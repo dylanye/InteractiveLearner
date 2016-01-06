@@ -70,7 +70,7 @@ public class ApplyMultinomial {
     }
 
     /**
-     * Removes words that do not occur very often in the document.
+     * Removes words that do not occur very often in the document. If the occurrence is less than 0,5% of the text, the word will be removed.
      */
     public void removeRareWords(){
         String currentWord;

@@ -29,7 +29,7 @@ public class Classifier {
     public Classifier() throws FileNotFoundException {
         categorizedFolder = new HashMap<String, File[]>();
         categorizedWordCount = new HashMap<String, Map<String, Integer>>();
-        File commonWordsFile = new File("D:/Eclipse/git/InteractiveLearner/src/data/google-10000-english.txt");
+        File commonWordsFile = new File("./src/data/commonwords.txt");
         try(BufferedReader br = new BufferedReader(new FileReader(commonWordsFile))) {
             List<String> temp = new ArrayList<String>();
             int index = 0;
@@ -106,7 +106,7 @@ public class Classifier {
                     double categoryAccuracy;
                     int totalFiles = fileArray.length;
                     categoryAccuracy = (double) resultMap.get(category) / (double) totalFiles;
-                    System.out.println("Accuracy for category: " + category + " is: " + categoryAccuracy + "%");
+                    System.out.println("Accuracy for category: " + category + " is: " + categoryAccuracy);
                 }
                 System.out.println(resultMap.toString());
 

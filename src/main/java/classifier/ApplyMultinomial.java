@@ -67,7 +67,7 @@ public class ApplyMultinomial {
                 maxCategory = s;
             }
         }
-        return "Highest probability for category: "+ maxCategory + " with probability" + maxProbability;
+        return "Highest probability for category: "+ maxCategory;
     }
 
     /**

@@ -29,7 +29,6 @@ public class Classifier {
     public Classifier() throws FileNotFoundException {
         categorizedFolder = new HashMap<String, File[]>();
         categorizedWordCount = new HashMap<String, Map<String, Integer>>();
-        fileWords = new HashMap<File, String[]>();
         File commonWordsFile = new File("D:/Eclipse/git/InteractiveLearner/src/data/google-10000-english.txt");
         try(BufferedReader br = new BufferedReader(new FileReader(commonWordsFile))) {
             List<String> temp = new ArrayList<String>();
@@ -58,6 +57,7 @@ public class Classifier {
         TrainerMultinomial trainer = new TrainerMultinomial(categorizedWordCount, categorizedFolder);
         do {
         	String applyOrACC = askApplyACC().toLowerCase();
+            fileWords = new HashMap<File, String[]>();
             if(applyOrACC.equals("apply")) {
                 String[] list = tokenizer(read(askFileLocation()));
                 new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
@@ -101,7 +101,7 @@ public class Classifier {
                 System.out.println(resultMap.toString());
 
             }
-        } while (askContinue());
+        }while (askContinue());
     }
 
     /**

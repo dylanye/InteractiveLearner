@@ -33,6 +33,7 @@ public class Classifier {
     public Classifier() throws FileNotFoundException {
         categorizedFolder = new HashMap<String, File[]>();
         categorizedWordCount = new HashMap<String, Map<String, Integer>>();
+        categoryList = new ArrayList<String>();
         File commonWordsFile = new File("./src/data/FeatureSelection.txt");
         try(BufferedReader br = new BufferedReader(new FileReader(commonWordsFile))) {
             List<String> temp = new ArrayList<String>();
@@ -89,7 +90,7 @@ public class Classifier {
                 //Create resultmap
                 //Resultmap has the category and the number of files that the apply method has decided that it was the best category.
                 Map<String, Integer> resultMap = new HashMap<String, Integer>();
-                for (String category : categorizedWordCount.keySet()) {
+                for (String category : categoryList) {
                     resultMap.put(category, 0);
                 }
 

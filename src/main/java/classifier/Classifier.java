@@ -60,7 +60,8 @@ public class Classifier {
             fileWords = new HashMap<File, String[]>();
             if(applyOrACC.equals("apply")) {
                 String[] list = tokenizer(read(askFileLocation()));
-                new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
+                ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
+                askCorrectCat(apply.getBestCategory());
             }
             if(applyOrACC.equals("acc")) {
                 String folderACC = askFolderLocation();
@@ -160,7 +161,7 @@ public class Classifier {
     	String answer = "";
     	boolean proceed = false;
     	do{ 
-    		answer = sendQuestion("Do you want to apply again?(Yes/No");
+    		answer = sendQuestion("Do you want to apply again?(Yes/No)");
     	} while(!answer.equals("Yes") && !answer.equals("No") && !answer.equals("yes") && !answer.equals("no"));
         if(answer.equals("Yes") || answer.equals("yes")) {
             proceed = true;
@@ -174,6 +175,29 @@ public class Classifier {
             answer = sendQuestion("Do you want to apply one file or determine the accurancy of a folder?(type: Apply/Acc)");
         } while(!answer.equals("Apply") && !answer.equals("Acc") && !answer.equals("apply") && !answer.equals("acc"));
         return answer;
+    }
+    
+    public String askCorrectCat(String predictedCat) {
+    	String answer = "";
+    	String answerCorrectCat = "";
+    	Set<String> categories = categorizedWordCount.keySet();
+    	boolean proceed = false;
+    	do {
+    		answer = sendQuestion("Is the predicted class correct?(Yes/No)");
+    	} while(!answer.toLowerCase().equals("yes") && !answer.toLowerCase().equals("no"));
+    	if(answer.toLowerCase().equals("no")) {
+    		do {
+    			answerCorrectCat = sendQuestion("What is the correct category?" + "\n" + "Choose from: " + categories.toString());
+    			for (String category : categories) {
+    				if(answerCorrectCat.equals(category)) {
+    					proceed = true;
+    				}
+    			}
+    		} while(!proceed);
+    	} else {
+    		answerCorrectCat = predictedCat;
+    	}
+    	return answerCorrectCat;
     }
 
     public void storeCatFiles(String Cat, String loc) {

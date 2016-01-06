@@ -173,4 +173,50 @@ public class TrainerMultinomial {
             probMap.put(s, tempProbMap);
         }
     }
+
+    public void update(Map<String, Map<String, Integer>> updateWordCountMap, Map<String, File[]> updateFileMap){
+        //First update the categorizedWordCount.
+        //Go over the category of the to be added map. This should only be 1 category.
+        for (String cat : updateWordCountMap.keySet()){
+            //Go over every word of the map.
+            for(String word : updateWordCountMap.get(cat).keySet()) {
+                //If the existing categorizedWordCount map contains the "words" of the to be added map, then increase the count of the "word"
+                if (categorizedWordCount.get(cat).containsKey(word)) {
+                    int oldCount = categorizedWordCount.get(cat).get(word);
+                    int addCount = updateWordCountMap.get(cat).get(word);
+                    int newCount = oldCount + addCount;
+                    categorizedWordCount.get(cat).put(word, newCount);
+                }
+                //If the "word" does not exist in the categorizedWordCount map, then add the "word" to the map with its count.
+                else {
+                    categorizedWordCount.get(cat).put(word, updateWordCountMap.get(cat).get(word));
+
+                }
+            }
+        }
+        //Second update the categorizedFiles.
+        //Go over the category of the to be added map. This should only be 1 category.
+        for (String cat : updateFileMap.keySet()){
+            //Create a temp file array of
+            File[] tempFileArray = new File[categorizedFolder.get(cat).length + 1];
+            File[] oldFileArray = categorizedFolder.get(cat);
+            File[] newFile = updateFileMap.get(cat);
+            for (int index = 0; index < tempFileArray.length; index++) {
+                if (index < tempFileArray.length) {
+                    tempFileArray[index] = oldFileArray[index];
+                }
+                else {
+                    //newFile should only have 1 file in the array, therefore index 0 can be used.
+                    tempFileArray[index] = newFile[0];
+                }
+            }
+            categorizedFolder.put(cat, tempFileArray);
+        }
+        try {
+            this.run();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("Update function for the trainer failed");
+        }
+    }
 }

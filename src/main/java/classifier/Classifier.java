@@ -59,9 +59,18 @@ public class Classifier {
         	String applyOrACC = askApplyACC().toLowerCase();
             fileWords = new HashMap<File, String[]>();
             if(applyOrACC.toLowerCase().equals("apply")) {
-                String[] list = tokenizer(read(askFileLocation()));
+            	File fileLoc = askFileLocation();
+                String[] list = tokenizer(read(fileLoc));
                 ApplyMultinomial apply = new ApplyMultinomial(trainer.getVocabulary(), trainer.getPriorCMap(), trainer.getProbMap(), featureSelectionApply(list));
-                askCorrectCat(apply.getBestCategory());
+                String correctCat = askCorrectCat(apply.getBestCategory());
+                categorizedFolder = new HashMap<String, File[]>();
+                categorizedWordCount = new HashMap<String, Map<String, Integer>>();
+                File[] fileLocA = new File[1];
+                fileLocA[0] = fileLoc;
+                categorizedFolder.put(correctCat, fileLocA);
+                countWord();
+                featureSelectionTrainer();
+                trainer.update(categorizedWordCount, categorizedFolder);
             }
             if(applyOrACC.toLowerCase().equals("acc")) {
                 String folderACC = askFolderLocation();

@@ -1,14 +1,20 @@
 package main.java.classifier;
 /**
  *
- * @author Christiaan en Dylan
+ * @author Christiaan Visscher en Dylan Ye
  */
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.ArrayList;
 
 public class Classifier {
     /**
@@ -136,7 +142,7 @@ public class Classifier {
     public Map<String, Map<String, Integer>> getCategorizedWordCount() {
         return categorizedWordCount;
     }
-    
+
     public List<String> getCategoryList() {
     	return categoryList;
     }
@@ -176,19 +182,19 @@ public class Classifier {
         }
         return proceed;
     }
-    
+
     public boolean askContinue() {
     	String answer = "";
     	boolean proceed = false;
-    	do{ 
-    		answer = sendQuestion("Do you want to apply again?(Yes/No)");
+    	do{
+    		answer = sendQuestion("Do you want to calculate again?(Yes/No)" + "\n" + "Yes: you can choose to apply or acc again"+ "\n" +  "No: the program stops");
     	} while(!answer.toLowerCase().equals("yes") && !answer.toLowerCase().equals("no"));
         if(answer.toLowerCase().equals("yes")) {
             proceed = true;
         }
     	return proceed;
     }
-    
+
     public String askApplyACC() {
         String answer = "";
         do {
@@ -196,7 +202,7 @@ public class Classifier {
         } while(!answer.toLowerCase().equals("apply") && !answer.toLowerCase().equals("acc"));
         return answer;
     }
-    
+
     public String askCorrectCat(String predictedCat) {
     	String answer = "";
     	String answerCorrectCat = "";
@@ -243,31 +249,6 @@ public class Classifier {
     public String[] tokenizer(String text) {
         String[] tokenizedText = text.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
         return tokenizedText;
-    }
-
-    public List<String> concatenateAllText(String cat) throws FileNotFoundException {
-        List<String> result = new ArrayList<String>();
-        File[] filesFromMap = categorizedFolder.get(cat);
-        for (int i = 0; i < filesFromMap.length; i++) {
-            List<String> temp = new ArrayList<String>();
-            String text = read(filesFromMap[i]);
-            String[] tokenizedText = tokenizer(text);
-            for (int j = 0; j < tokenizedText.length; j++) {
-                temp.add(tokenizedText[j]);
-            }
-            result.addAll(temp);
-        }
-        return result;
-    }
-
-    public List<String> removeDoubles(String[] tokenizedText) {
-        List<String> result = new ArrayList<String>();
-        for(int i = 0; i < tokenizedText.length; i++) {
-            if(!result.contains(tokenizedText[i])) {
-                result.add(tokenizedText[i]);
-            }
-        }
-        return result;
     }
 
     public Map<String, Integer> removeAndCountDoubles(String[] tokenizedText) {

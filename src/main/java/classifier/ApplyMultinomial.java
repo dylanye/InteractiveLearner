@@ -1,9 +1,12 @@
 package main.java.classifier;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
- * Created by dylan on 6-12-15.
+ * @author Christiaan Visscher en Dylan Ye
  */
 public class ApplyMultinomial {
 

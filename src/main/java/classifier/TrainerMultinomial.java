@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by dylan on 6-12-15.
+ * @author Christiaan Visscher en Dylan Ye
  */
 public class TrainerMultinomial {
 
@@ -174,6 +174,11 @@ public class TrainerMultinomial {
         }
     }
 
+    /**
+     * Updates the interactive learner's training with the newly added file.
+     * @param updateWordCountMap A map with the new words and the according count.
+     * @param updateFileMap A map with the new file and its category.
+     */
     public void update(Map<String, Map<String, Integer>> updateWordCountMap, Map<String, File[]> updateFileMap){
         //First update the categorizedWordCount.
         //Go over the category of the to be added map. This should only be 1 category.

@@ -8,12 +8,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Classifier {
     /**
@@ -31,10 +26,26 @@ public class Classifier {
 
     private String[] commonWords = new String[]{"the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at"};
 
-    public Classifier() {
+    private String[] googleCommonWords;
+
+    public Classifier() throws FileNotFoundException {
         categorizedFolder = new HashMap<String, File[]>();
         categorizedWordCount = new HashMap<String, Map<String, Integer>>();
         fileWords = new HashMap<File, String[]>();
+        File commonWordsFile = new File("C:\\Users\\Dylan Ye\\Documents\\Development\\InteractiveLearner\\src\\data\\google-10000-english.txt");
+        try(BufferedReader br = new BufferedReader(new FileReader(commonWordsFile))) {
+            List<String> temp = new ArrayList<String>();
+            int index = 0;
+            for(String line; (line = br.readLine()) != null; ) {
+                temp.add(index, line);
+                index++;
+            }
+            googleCommonWords = new String[temp.size()];
+            googleCommonWords = temp.toArray(googleCommonWords);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Arrays.toString(googleCommonWords));
     }
 
     public void run() throws FileNotFoundException {
@@ -247,26 +258,31 @@ public class Classifier {
     }
 
     public void featureSelectionTrainer() throws FileNotFoundException {
+        List<String> list = new ArrayList<String>();
+        int index = 0;
         for(String category : categorizedWordCount.keySet()) {
             for (String word : categorizedWordCount.get(category).keySet()){
-                for (int i = 0; i < commonWords.length; i++){
-                    if (commonWords.equals(word)){
+                System.out.println(word);
+                for (int i = 0; i < googleCommonWords.length; i++){
+                    if (Arrays.asList(googleCommonWords).contains(word)){
                         categorizedWordCount.get(category).remove(word);
+                        list.add(index, word);
+                        index++;
                     }
                 }
             }
         }
+        System.out.println("XXXXXXXXXXXX" + list.toString());
     }
 
     public List<String> featureSelectionApply(String[] words) throws FileNotFoundException {
         List<String> result = new ArrayList<String>();
         int index = 0;
-        for (int i = 0; i < commonWords.length; i++){
-            for (int j = 0; j < words.length; j++){
-                if (!words[j].equals(commonWords[i])){
-                    result.add(index, words[j]);
-                    index++;
-                }
+
+        for (int i = 0; i < words.length; i++){
+            if (!Arrays.asList(googleCommonWords).contains(words[i])) {
+                result.add(index, words[i]);
+                index++;
             }
         }
         return result;
